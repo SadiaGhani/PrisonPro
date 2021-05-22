@@ -46,7 +46,7 @@ public class FTProject {
         dd.setVisible(true);
        
         DSearch ds = new DSearch();
-        ds.setVisible(true); */
+        ds.setVisible(true); 
         
         JAdd ja = new JAdd();
         ja.setVisible(true);
@@ -58,7 +58,19 @@ public class FTProject {
         ju.setVisible(true);
         
         JSearch js = new JSearch();
-        js.setVisible(true);
+        js.setVisible(true);*/
+       
+       SPAdd spa = new SPAdd();
+       spa.setVisible(true);
+       
+       SPDelete spd = new SPDelete();
+       spd.setVisible(true);
+       
+       SPSearch sps = new SPSearch();
+       sps.setVisible(true);
+       
+       SPUpdate spu = new SPUpdate();
+       spu.setVisible(true);
         
         
         
