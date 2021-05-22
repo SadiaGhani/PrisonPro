@@ -15,7 +15,7 @@ public class FTProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        FAdd fa = new FAdd();
+       /* FAdd fa = new FAdd();
         fa.setVisible(true);
         
         FView fv = new FView();
@@ -41,6 +41,27 @@ public class FTProject {
         
         DAdd da = new DAdd();
         da.setVisible(true);
+        
+         DDelete dd = new DDelete();
+        dd.setVisible(true);
+       
+        DSearch ds = new DSearch();
+        ds.setVisible(true); */
+        
+        JAdd ja = new JAdd();
+        ja.setVisible(true);
+        
+        JDelete jd = new JDelete();
+        jd.setVisible(true);
+        
+        JUpdate ju = new JUpdate();
+        ju.setVisible(true);
+        
+        JSearch js = new JSearch();
+        js.setVisible(true);
+        
+        
+        
         
         // TODO code application logic here
     }
