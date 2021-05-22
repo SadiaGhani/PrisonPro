@@ -81,7 +81,7 @@ public class FTProject {
        vu.setVisible(true);
        
        VSearch vs = new VSearch();
-       vs.setVisible(true);*/
+       vs.setVisible(true);
        
         AWork aw = new AWork();
         aw.setVisible(true);
@@ -91,6 +91,27 @@ public class FTProject {
         
         FeedBack fb = new FeedBack();
         fb.setVisible(true);
+       
+       Entrance e = new Entrance();
+       e.setVisible(true);
+       
+       ViewRecords vr = new ViewRecords();
+       vr.setVisible(true);
+       
+       ALogin al = new ALogin();
+       al.setVisible(true);*/
+       
+       JLogin jl = new JLogin();
+       jl.setVisible(true);
+       
+       AMenu am = new AMenu();
+       am.setVisible(true);
+       
+       JMenu jm = new JMenu();
+       jm.setVisible(true);
+       
+       PMenu pm = new PMenu();
+       pm.setVisible(true);
         
         
         
