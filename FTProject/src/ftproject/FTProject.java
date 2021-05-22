@@ -36,8 +36,7 @@ public class FTProject {
         PSearch ps = new PSearch();
         ps.setVisible(true);
         
-        AWork aw = new AWork();
-        aw.setVisible(true);
+       
         
         DAdd da = new DAdd();
         da.setVisible(true);
@@ -58,7 +57,7 @@ public class FTProject {
         ju.setVisible(true);
         
         JSearch js = new JSearch();
-        js.setVisible(true);*/
+        js.setVisible(true);
        
        SPAdd spa = new SPAdd();
        spa.setVisible(true);
@@ -71,6 +70,29 @@ public class FTProject {
        
        SPUpdate spu = new SPUpdate();
        spu.setVisible(true);
+       
+       VAdd va = new VAdd();
+       va.setVisible(true);
+       
+       VDelete vd = new VDelete();
+       vd.setVisible(true);
+       
+       VUpdate vu = new VUpdate();
+       vu.setVisible(true);
+       
+       VSearch vs = new VSearch();
+       vs.setVisible(true);*/
+       
+        AWork aw = new AWork();
+        aw.setVisible(true);
+        
+        WorkActivity wa = new WorkActivity();
+        wa.setVisible(true);
+        
+        FeedBack fb = new FeedBack();
+        fb.setVisible(true);
+        
+        
         
         
         
