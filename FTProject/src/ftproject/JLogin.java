@@ -5,6 +5,8 @@
  */
 package ftproject;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL PC
@@ -29,15 +31,16 @@ public class JLogin extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jUname = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jPass = new javax.swing.JPasswordField();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Jailor Login");
 
         jPanel1.setLayout(null);
 
@@ -46,8 +49,8 @@ public class JLogin extends javax.swing.JFrame {
         jLabel1.setText("Jailor Login");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(70, 60, 290, 48);
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(220, 180, 150, 26);
+        jPanel1.add(jUname);
+        jUname.setBounds(220, 180, 150, 26);
 
         jLabel3.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel3.setText("USERNAME");
@@ -56,6 +59,11 @@ public class JLogin extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
         jButton1.setBounds(30, 320, 120, 31);
 
@@ -64,11 +72,16 @@ public class JLogin extends javax.swing.JFrame {
         jLabel4.setText("PASSWORD");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(80, 250, 130, 30);
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(220, 250, 150, 26);
+        jPanel1.add(jPass);
+        jPass.setBounds(220, 250, 150, 26);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("Login");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2);
         jButton2.setBounds(210, 320, 140, 31);
 
@@ -91,6 +104,32 @@ public class JLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+         String jusername;
+        String jpassword;
+        jusername = jUname.getText();
+        jpassword = jPass.getText();
+        
+        if(jusername.equals("jailor") && jpassword.equals("jailor123"))
+        {
+            JOptionPane.showMessageDialog(null,"Logged In Successfully!!");
+             
+             JMenu jm = new JMenu();
+             this.setVisible(false);
+             jm.setVisible(true);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Invalid Login!!\n Try Again  ('_')");
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+          Entrance e = new Entrance();
+          this.setVisible(false);
+          e.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,7 +174,7 @@ public class JLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField jPass;
+    private javax.swing.JTextField jUname;
     // End of variables declaration//GEN-END:variables
 }

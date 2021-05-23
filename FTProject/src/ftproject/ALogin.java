@@ -5,6 +5,8 @@
  */
 package ftproject;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL PC
@@ -28,8 +30,8 @@ public class ALogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        AUname = new javax.swing.JTextField();
+        APass = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -38,18 +40,19 @@ public class ALogin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Admin Login");
 
         jPanel1.setLayout(null);
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(210, 120, 180, 26);
+        jPanel1.add(AUname);
+        AUname.setBounds(210, 120, 180, 26);
 
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        APass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                APassActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(210, 180, 180, 26);
+        jPanel1.add(APass);
+        APass.setBounds(210, 180, 180, 26);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Username");
@@ -105,16 +108,34 @@ public class ALogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+         Entrance e = new Entrance();
+         this.setVisible(false);
+        e.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        String Ausername;
+        String Apassword;
+        Ausername = AUname.getText();
+        Apassword = APass.getText();
+        
+        if(Ausername.equals("admin") && Apassword.equals("admin123"))
+        {
+            JOptionPane.showMessageDialog(null,"Logged In Successfully!!");
+             
+             AMenu am = new AMenu();
+             this.setVisible(false);
+             am.setVisible(true);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Invalid Login!!\n Try Again  ('_')");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void APassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_APassActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_APassActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,6 +173,8 @@ public class ALogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField APass;
+    private javax.swing.JTextField AUname;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -159,7 +182,5 @@ public class ALogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
