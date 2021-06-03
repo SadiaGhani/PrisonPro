@@ -5,6 +5,8 @@
  */
 package ftproject;
 
+import java.util.Random;
+
 /**
  *
  * @author Mask
@@ -62,8 +64,8 @@ public class Guards {
         boolean f = false;
         int size = GAddress.length();
         for (int i = 0; i < size; i++) {
-            if ((GAddress.charAt(i) >= 'a' && GAddress.charAt(i) <= 'z') || (GAddress.charAt(i) >= 'A' && GAddress.charAt(i) <= 'Z') || GAddress.charAt(i) == ' ' || (GAddress.charAt(i) >= 0 && GAddress.charAt(i) <= 9)) {
-
+            if ((GAddress.charAt(i) >= 'a' && GAddress.charAt(i) <= 'z') || (GAddress.charAt(i) >= 'A' && GAddress.charAt(i) <= 'Z') || GAddress.charAt(i) == ' ' || (GAddress.charAt(i) >= 0 && GAddress.charAt(i) <= 9)||  GAddress.charAt(i)==',' || GAddress.charAt(i)=='#' || GAddress.charAt(i)=='.' || GAddress.charAt(i)=='-' || GAddress.charAt(i)=='/') 
+            {
                 this.GAddress = GAddress;
                 f = true;
             }
@@ -100,13 +102,7 @@ public class Guards {
         return f;
     }
 
-    public String getGID() {
-        return GID;
-    }
-
-    public void setGID(String GID) {
-        this.GID = GID;
-    }
+    
 
     public String getGContact() {
         return GContact;
@@ -118,11 +114,11 @@ public class Guards {
         if (size == 11) {
             for (int i = 0; i < size; i++) {
 
-                if (GContact.charAt(i) >= 0 && GContact.charAt(i) <= 9) {
-
+                if (GContact.charAt(i) >= '0'& GContact.charAt(i) <= '9')
+                {
                     this.GContact = GContact;
                     f = true;
-                }
+                } 
 
             }
 
@@ -139,4 +135,31 @@ public class Guards {
         this.GTime = GTime;
     }
 
+  //id work
+    public String  GenerateGID()
+    {
+        String s = "G-";
+        Random rand = new Random();
+        for(int i = 0 ; i < 3 ; i++)
+        {
+            s +=rand.nextInt(9)+1;
+            
+            
+        }
+
+        return s;
+    }
+    
+    public void setGID()
+    {
+        String id = GenerateGID();
+        this.GID = id;
+        
+    }
+
+    public String getGID() {
+        return GID;
+    }
+    
+    
 }

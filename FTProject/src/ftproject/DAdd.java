@@ -228,6 +228,9 @@ public class DAdd extends javax.swing.JFrame {
                      fw.write(System.getProperty("line.separator"));
                      fw.close();
                      JOptionPane.showMessageDialog(null, " Your doctor is added successfully on the ID "+"\n"+d.getDId());
+                     DMenu dm = new DMenu();
+                    this.setVisible(false);
+                    dm.setVisible(true);  
                  
                  }
                  catch(Exception ex)
@@ -250,9 +253,7 @@ public class DAdd extends javax.swing.JFrame {
         
         
         
-            // DMenu dm = new DMenu();
-           // this.setVisible(false);
-           // dm.setVisible(true);  
+            
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

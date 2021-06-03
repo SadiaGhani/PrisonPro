@@ -49,7 +49,7 @@ public class Visitors {
         {
             for(int i = 0 ; i < size ; i++)
             {
-                if(VCnic.charAt(i)>=0&&VCnic.charAt(i)<=9)
+                if(VCnic.charAt(i)>='0'&&VCnic.charAt(i)<='9')
                 {
                     f = true;
                    this.VCnic = VCnic; 
@@ -94,7 +94,7 @@ public class Visitors {
         for(int i = 0 ; i< size ; i++)
         {
             
-            if(VContact.charAt(i)>=0&&VContact.charAt(i)<=9)
+            if(VContact.charAt(i)>='0'&&VContact.charAt(i)<='9')
             {
                         
                 this.VContact = VContact;
