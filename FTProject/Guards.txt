@@ -25,3 +25,12 @@ Time of service: 5 years
 Duty Shift: Day
 Duty Hours: 6
 
+Guard's ID: G-277
+Guard's Name: shahrukh khan
+Doctor's Age: 45
+Contact No: 03214204207
+Address: dehli india
+Time of service: 5 years
+Duty Shift: Day
+Duty Hours: 5
+

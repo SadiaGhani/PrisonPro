@@ -353,7 +353,8 @@ public class FAdd extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-                          String f1 = cname.getText();
+             f.setFirNumber();
+             String f1 = cname.getText();
              String f2 = cfname.getText();
              String f3 = cnum.getText();
              String f4 = caddress.getText();
