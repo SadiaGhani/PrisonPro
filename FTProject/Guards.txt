@@ -1,0 +1,27 @@
+Guard's ID: null
+Guard's Name: Abdullah butt
+Doctor's Age: 37
+Contact No: 03214204207
+Address: daroghawala,Lahore
+Time of service: 5 months
+Duty Shift: Night
+Duty Hours: 6
+
+Guard's ID: null
+Guard's Name: asdfgh
+Doctor's Age: 28
+Contact No: 12345678909
+Address: asdfghjkl
+Time of service: wsedrfgth
+Duty Shift: Night
+Duty Hours: 4
+
+Guard's ID: G-663
+Guard's Name: yaqoob mughal
+Doctor's Age: 34
+Contact No: 03214545667
+Address: lahore pakistan
+Time of service: 5 years
+Duty Shift: Day
+Duty Hours: 6
+
