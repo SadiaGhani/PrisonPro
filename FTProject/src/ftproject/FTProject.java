@@ -9,15 +9,23 @@ package ftproject;
  *
  * @author DELL PC
  */
+import java.util.*;
 public class FTProject {
-
+//doctor mamay ki arraylist
+ public static ArrayList<Doctors>  DocList = new ArrayList<Doctors>();
+    
+    
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String[] args) {     
       
       Entrance start = new Entrance();
       start.setVisible(true);
+
+      
        
     }
     

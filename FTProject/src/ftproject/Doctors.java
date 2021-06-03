@@ -55,7 +55,7 @@ public class Doctors {
         for(int i = 0 ; i< size ; i++)
         {
             
-            if(DContact.charAt(i)>=0&&DContact.charAt(i)<=9)
+            if(DContact.charAt(i)>='0'&&DContact.charAt(i)<='9')
             {
                         
                 this.DContact = DContact;
@@ -93,10 +93,10 @@ public class Doctors {
         return DSalary;
     }
 
-    public void setDSalary(double DSalary) {
+    public boolean setDSalary(double DSalary) {
     
         this.DSalary = DSalary;
-       
+       return true;
        
     }
 
@@ -114,27 +114,35 @@ public class Doctors {
         return f;
     }
 
+ 
 
 
-    public void setDId(String DId) {
-        
-        this.DId = DId;
-    }
     //id generator
-    public void GenerateDID()
+    public String  GenerateDID()
     {
         String s = "D-";
         Random rand = new Random();
         for(int i = 0 ; i < 3 ; i++)
         {
-            s +=rand.nextInt();
+            s +=rand.nextInt(10)+1;
             
             
         }
             
          this.DId = s;   
         
+        return s;
+    }
+    
+    public void setDID()
+    {
+        String id = GenerateDID();
+        this.DId = id;
         
+    }
+
+    public String getDId() {
+        return DId;
     }
     
 }
