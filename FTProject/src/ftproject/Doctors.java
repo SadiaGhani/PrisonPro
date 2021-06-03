@@ -124,7 +124,7 @@ public class Doctors {
         Random rand = new Random();
         for(int i = 0 ; i < 3 ; i++)
         {
-            s +=rand.nextInt(10)+1;
+            s +=rand.nextInt(9)+1;
             
             
         }

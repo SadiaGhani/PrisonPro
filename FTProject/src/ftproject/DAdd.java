@@ -5,6 +5,7 @@
  */
 package ftproject;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
 import static java.util.Collections.list;
 import javax.swing.JOptionPane;
@@ -197,7 +198,7 @@ public class DAdd extends javax.swing.JFrame {
                       d3 = "male";
                 } else if (dfemale.isSelected())
                {
-                      d3= "feamle";
+                      d3= "female";
                 }
              String d4 = dnum.getText();
              int d5 = Integer.parseInt(dtime.getText());
@@ -215,7 +216,26 @@ public class DAdd extends javax.swing.JFrame {
                  
                  doc.add(d);
                  FTProject.DocList = doc;
-                 JOptionPane.showMessageDialog(null, " Your doctor is added successfully on the ID "+d.getDId());
+                 try{
+                 FileWriter fw = new FileWriter("Doctors.txt",true);
+                     fw.write("Doctor's ID: "+d.getDId()+"\n");
+                     fw.write("Doctor's Name: "+d1+"\n");
+                     fw.write("Gender: "+d3+"\n");
+                     fw.write("Doctor's Age: "+d2+"\n");
+                     fw.write("Contact No: "+d4+"\n");
+                     fw.write("Duty Hours: "+d5+"\n");
+                     fw.write("Salary: "+d6+"\n");
+                     fw.write(System.getProperty("line.separator"));
+                     fw.close();
+                     JOptionPane.showMessageDialog(null, " Your doctor is added successfully on the ID "+"\n"+d.getDId());
+                 
+                 }
+                 catch(Exception ex)
+                 {
+                     JOptionPane.showMessageDialog(null, " data is not added in file");
+                 }
+                 
+                 
                  
              }
              else
