@@ -10,3 +10,14 @@ Date In: 03/06/2020
 Date Out: 03/06/2022
 
 
+Prisoner's ID: P-192
+Prisoner's Name: Zamir Ali
+Prisoner's Age: 40
+Gender: Male
+Address: House # 45, CIty housing Scheme.
+Section: B
+Room No: 79
+Crime Details: Murder
+Date In: 09/06/2017
+Date Out: 09/06/2021
+

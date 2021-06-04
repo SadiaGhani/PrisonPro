@@ -14,6 +14,8 @@ public class FTProject {
 //doctor mamay ki arraylist
  public static ArrayList<Doctors>  DocList = new ArrayList<Doctors>();
  public static ArrayList<Prisoners>  PriList = new ArrayList<Prisoners>();
+ public static ArrayList<FIR>  FirList = new ArrayList<FIR>();
+ 
     
     
     /**

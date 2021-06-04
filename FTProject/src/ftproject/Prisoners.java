@@ -166,7 +166,7 @@ public class Prisoners {
         int size = PAddress.length();
          for(int i=0; i<size; i++)
     {
-      if((PAddress.charAt(i)>='A' &&PAddress.charAt(i)<='Z') ||( PAddress.charAt(i)>='a' && PAddress.charAt(i)<='z' )|| PAddress.charAt(i)==' ' ||(PAddress.charAt(i)>= '0' && PAddress.charAt(i)<= '9'))
+      if((PAddress.charAt(i)>='A' &&PAddress.charAt(i)<='Z') ||( PAddress.charAt(i)>='a' && PAddress.charAt(i)<='z' )|| PAddress.charAt(i)==' ' ||(PAddress.charAt(i)>= '0' && PAddress.charAt(i)<= '9') ||  PAddress.charAt(i)==',' || PAddress.charAt(i)=='#' || PAddress.charAt(i)=='.' || PAddress.charAt(i)=='-' || PAddress.charAt(i)=='/')
       {
         flag = true;
         

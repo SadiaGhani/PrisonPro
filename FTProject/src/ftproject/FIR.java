@@ -22,28 +22,36 @@ public class FIR {
     private String PlaceOfIncident;
     private String DistrictOfIncident;
     private String DetailsofIncident;
+    public String DateOfIncident;
     
-    public void GenerateDID()
+    public String  GenerateFirNumber()
     {
         String s = "F-";
         Random rand = new Random();
         for(int i = 0 ; i < 5 ; i++)
         {
-            s +=rand.nextInt();
+            s +=rand.nextInt(9)+1;
             
             
         }
             
          this.FirNumber = s;   
         
+        return s;
+    }
+    
+    public void setFirNumber()
+    {
+        String id = GenerateFirNumber();
+        this.FirNumber = id;
         
     }
-    public boolean setFirNumber(String FirNumber)
-    {
-        boolean flag = false;
-        int size = FirNumber.length();
-        return flag;
+
+    public String getFirNumber() {
+        return FirNumber;
     }
+    
+   
     /**
      * 
      * @param CName
@@ -119,9 +127,7 @@ public class FIR {
         return CFatherName;
     }
 
-    public String getFirNumber() {
-        return FirNumber;
-    }
+   
 /**
  * 
  * @param CNumber
@@ -175,7 +181,7 @@ public class FIR {
         int size = Address.length();
          for(int i=0; i<size; i++)
     {
-      if((Address.charAt(i)>='A' &&Address.charAt(i)<='Z') ||( Address.charAt(i)>='a' && Address.charAt(i)<='z' )|| Address.charAt(i)==' ' ||(Address.charAt(i)>= '0' && Address.charAt(i)<= '9'))
+      if((Address.charAt(i)>='A' &&Address.charAt(i)<='Z') ||( Address.charAt(i)>='a' && Address.charAt(i)<='z' )|| Address.charAt(i)==' ' || Address.charAt(i)==',' || Address.charAt(i)=='#' || Address.charAt(i)=='.' || Address.charAt(i)=='-' || Address.charAt(i)=='/'||(Address.charAt(i)>= '0' && Address.charAt(i)<= '9'))
       {
         flag = true;
         
@@ -352,9 +358,30 @@ public class FIR {
  * 
  * @param DetailsofIncident 
  */
-    public void setDetailsofIncident(String DetailsofIncident) {
-        this.DetailsofIncident = DetailsofIncident;
+    public boolean setDetailsofIncident( String DetailsofIncident)
+    {
+        boolean flag = false;
+        int size = DetailsofIncident.length();
+         for(int i=0; i<size; i++)
+    {
+      if((DetailsofIncident.charAt(i)>='A' &&DetailsofIncident.charAt(i)<='Z') ||( DetailsofIncident.charAt(i)>='a' && DetailsofIncident.charAt(i)<='z' )|| DetailsofIncident.charAt(i)==' ' ||(DetailsofIncident.charAt(i)>= '0' && DetailsofIncident.charAt(i)<= '9'))
+      {
+        flag = true;
+        
+      }
+      else
+      {
+        flag= false;
+        break;
+      }
     }
+    if(flag== true)
+    {
+        this.DetailsofIncident= DetailsofIncident;
+    }
+    return flag;
+    }
+    
     
     
 }
