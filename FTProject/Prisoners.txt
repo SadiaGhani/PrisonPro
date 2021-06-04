@@ -1,0 +1,12 @@
+Prisoners's ID: P-475
+Prisoner's Name: Ahmed Raza
+Prisoner's Age: 45
+Gender: Male
+Address: Bhasin Chak Number 45 Tehsil Pattoki District Kasur
+Section: C
+Room No: 56
+Crime Details: Caught in a Robry case
+Date In: 03/06/2020
+Date Out: 03/06/2022
+
+

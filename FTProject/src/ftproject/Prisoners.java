@@ -15,27 +15,42 @@ public class Prisoners {
     private String PId;
     private String PName;
     private int PAge;
-    private String PGender;
+    public String PGender;
     private String PSection;
     private int PRoom;
     private String PAddress;
     private String CDetails;
+    public String dateIN;
+    public String dateOUT;
     
     
-    public void GenerateDID()
+   public String  GeneratePID()
     {
         String s = "P-";
         Random rand = new Random();
         for(int i = 0 ; i < 3 ; i++)
         {
-            s +=rand.nextInt();
+            s +=rand.nextInt(9)+1;
             
             
         }
             
-         this.PId = s;          
+         this.PId = s;   
+        
+        return s;
+    }
+    
+    public void setPId()
+    {
+        String id = GeneratePID();
+        this.PId = id;
         
     }
+
+    public String getPId() {
+        return PId;
+    }
+    
     
      public boolean setName( String PName)
     {
@@ -82,21 +97,7 @@ public class Prisoners {
     }
     
     
-     public boolean setPGender(String PGender) {
-        boolean flag = false;
-        if(PGender=="male"||PGender=="female"||PGender=="Male"||PGender=="Female")
-        {
-            this.PGender = PGender;
-            flag = true;
-        }
-        
-                   
-       return flag;
-    }
-
-    public String getPGender() {
-        return PGender;
-    }
+    
   public boolean setPSection(String PSection)
   {
       boolean flag = false;
@@ -125,6 +126,40 @@ public class Prisoners {
         return PRoom;
     }
      
+    public boolean setCDetails( String CDetails)
+    {
+        boolean flag = false;
+        int size = CDetails.length();
+         for(int i=0; i<size; i++)
+    {
+      if((CDetails.charAt(i)>='A' &&CDetails.charAt(i)<='Z') ||( CDetails.charAt(i)>='a' && CDetails.charAt(i)<='z' )|| CDetails.charAt(i)==' ' ||(CDetails.charAt(i)>= '0' && CDetails.charAt(i)<= '9'))
+      {
+        flag = true;
+        
+      }
+      else
+      {
+        flag= false;
+        break;
+      }
+    }
+    if(flag== true)
+    {
+        this.CDetails= CDetails;
+    }
+    return flag;
+    }
+    
+    
+     public String getCDetails() {
+        return CDetails;
+    }
+     
+     
+    public String getPAddress() {
+        return PAddress;
+    }
+
     public boolean setPAddress( String PAddress)
     {
         boolean flag = false;
@@ -148,16 +183,7 @@ public class Prisoners {
     }
     return flag;
     }
-    public String getPAddress() {
-        return PAddress;
-    }
 
-    public void setCDetails(String CDetails) {
-        this.CDetails = CDetails;
-    }
-
-    public String getCDetails() {
-        return CDetails;
-    }
+   
      
 }
