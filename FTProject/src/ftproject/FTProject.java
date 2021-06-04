@@ -17,7 +17,8 @@ public class FTProject {
  public static ArrayList<FIR>  FirList = new ArrayList<FIR>();
  public static ArrayList<Visitors>  VList = new ArrayList<Visitors>();
  public static ArrayList<Guards>  GList = new ArrayList<Guards>();   
- public static ArrayList<Jailors>  JaiList = new ArrayList<Jailors>();   
+ public static ArrayList<Jailors>  JaiList = new ArrayList<Jailors>();  
+ public static ArrayList<Works>  WorkList = new ArrayList<Works>();   
     
     /**
      * @param args the command line arguments
