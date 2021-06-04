@@ -1,9 +1,4 @@
-Jailor's ID: J-665
-Jailor's Name: Zain Ali
-Jailor's Age: 40
-Gender: Male
-Contact: 03245678902
-Address: Jhang , Pakistan
-Username: zain
-Password: zain@123
-
+J-966,ali,23,Male,03124567890,pakistan,ali,ali123
+J-894,zain,39,Male,03124567890,Kasur, pakistan,zain,zain@123
+J-949,jhon,45,Male,03245678901,miltan, pakistan,jhon,jhon#123
+J-477,j,30,Male,12345678901,Ak,j,j1

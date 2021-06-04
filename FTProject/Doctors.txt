@@ -1,8 +1,2 @@
-Doctor's ID: D-1081
-Doctor's Name: sadia ghani
-Gender: feamle
-Doctor's Age: 34
-Contact No: 03214567889
-Duty Hours: 12
-Salary: 12345.67
-
+D-955,Bushra Farroq,female,25,03214576543,7,35000.0
+D-161,Fizza,female,28,03453412345,8,40000.0

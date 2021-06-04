@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author DELL PC
  */
 public class JLogin extends javax.swing.JFrame {
-
+   Login lg = new Login();
     /**
      * Creates new form JLogin
      */
@@ -111,18 +111,19 @@ public class JLogin extends javax.swing.JFrame {
         jusername = jUname.getText();
         jpassword = jPass.getText();
         
-        if(jusername.equals("jailor") && jpassword.equals("jailor123"))
+        if(lg.credentials(jusername, jpassword) == true)
         {
             JOptionPane.showMessageDialog(null,"Logged In Successfully!!");
              
-             JMenu jm = new JMenu();
+             JMenu jm = new JMenu(); 
              this.setVisible(false);
              jm.setVisible(true);
         }
-        else
-        {
-            JOptionPane.showMessageDialog(null,"Invalid Login!!\n Try Again  ('_')");
-        }
+        else {
+                JOptionPane.showMessageDialog(null, "Invalid Login!!\n Try Again  ('_')");
+            }
+        
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

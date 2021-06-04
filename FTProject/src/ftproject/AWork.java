@@ -172,10 +172,10 @@ public class AWork extends javax.swing.JFrame {
             
              try{
                  FileWriter fw = new FileWriter("Works.txt",true);
-                     fw.write("Prisoner's ID: "+w.getPId()+"\n");
-                     fw.write("Prisoner's Name: "+w1+"\n");                     
-                     fw.write("Section: "+w2+"\n");
-                     fw.write("Task Assign: "+w3+"\n");                     
+                     fw.write(w.getPId()+",");
+                     fw.write(w1+",");                     
+                     fw.write(w2+",");
+                     fw.write(w3);                     
                                    
                      fw.write(System.getProperty("line.separator"));
                      fw.close();

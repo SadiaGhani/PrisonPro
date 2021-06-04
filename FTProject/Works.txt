@@ -1,5 +1,1 @@
-Prisoner's ID: PW-225
-Prisoner's Name: Ali
-Section: B
-Task Assign: Cooking
-
+PW-242,Wahid,B,Planting

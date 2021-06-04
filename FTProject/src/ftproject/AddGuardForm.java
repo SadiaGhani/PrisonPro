@@ -291,14 +291,15 @@ public class AddGuardForm extends javax.swing.JFrame {
                  FTProject.GList = gd;
                  try{
                  FileWriter fw = new FileWriter("Guards.txt",true);
-                     fw.write("Guard's ID: "+g.getGID()+"\n");
-                     fw.write("Guard's Name: "+g1+"\n");
-                     fw.write("Doctor's Age: "+g2+"\n");
-                     fw.write("Contact No: "+g3+"\n");
-                     fw.write("Address: "+g4+"\n");
-                     fw.write("Time of service: "+g5+"\n");
-                     fw.write("Duty Shift: "+g6+"\n");
-                     fw.write("Duty Hours: "+g7+"\n");
+                     fw.write(g.getGID()+",");
+                     fw.write(g1+",");
+                     fw.write(g2+",");
+                     fw.write(g3+",");
+                     fw.write(g4+",");
+                     fw.write(g5+",");
+                     fw.write(g7+",");
+                     fw.write(g6);
+                    
                      fw.write(System.getProperty("line.separator"));
                      fw.close();
                      JOptionPane.showMessageDialog(null, " Your guard is added successfully on the ID "+"\n"+g.getGID());

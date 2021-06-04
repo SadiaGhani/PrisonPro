@@ -262,14 +262,14 @@ public class JAdd extends javax.swing.JFrame {
             
              try{
                  FileWriter fw = new FileWriter("Jailors.txt",true);
-                     fw.write("Jailor's ID: "+j.getJId()+"\n");
-                     fw.write("Jailor's Name: "+j1+"\n");
-                     fw.write("Jailor's Age: "+j2+"\n");
-                     fw.write("Gender: "+j3+"\n");  
-                     fw.write("Contact: "+j4+"\n");
-                     fw.write("Address: "+j5+"\n");
-                     fw.write("Username: "+j6+"\n");
-                     fw.write("Password: "+j7+"\n");                     
+                     fw.write(j.getJId()+",");
+                     fw.write(j1+",");
+                     fw.write(j2+",");
+                     fw.write(j3+",");  
+                     fw.write(j4+",");
+                     fw.write(j5+",");
+                     fw.write(j6+",");
+                     fw.write(j7);                    
                                        
                      fw.write(System.getProperty("line.separator"));
                      fw.close();

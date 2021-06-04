@@ -274,16 +274,16 @@ public class PAdd extends javax.swing.JFrame {
                   
                   try{
                  FileWriter fw = new FileWriter("Prisoners.txt",true);
-                     fw.write("Prisoner's ID: "+p.getPId()+"\n");
-                     fw.write("Prisoner's Name: "+p1+"\n");
-                     fw.write("Prisoner's Age: "+p2+"\n");
-                     fw.write("Gender: "+p3+"\n");                    
-                     fw.write("Address: "+p5+"\n");
-                     fw.write("Section: "+p9+"\n");
-                     fw.write("Room No: "+p4+"\n");                     
-                     fw.write("Crime Details: "+p6+"\n");
-                     fw.write("Date In: "+p7+"\n");
-                     fw.write("Date Out: "+p8+"\n");                    
+                     fw.write(p.getPId()+",");
+                     fw.write(p1+",");
+                     fw.write(p2+",");
+                     fw.write(p3+",");                    
+                     fw.write(p5+",");
+                     fw.write(p9+",");
+                     fw.write(p4+",");                     
+                     fw.write(p6+",");
+                     fw.write(p7+",");
+                     fw.write(p8);                    
                      fw.write(System.getProperty("line.separator"));
                      fw.close();
                      JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+p.getPId());
