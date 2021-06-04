@@ -63,7 +63,7 @@ public class FAdd extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        area1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Write FIR");
@@ -138,9 +138,9 @@ public class FAdd extends javax.swing.JFrame {
             }
         });
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
+        area1.setColumns(20);
+        area1.setRows(5);
+        jScrollPane3.setViewportView(area1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -353,9 +353,37 @@ public class FAdd extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-             FMenu fm = new FMenu();
-             this.setVisible(false);
-             fm.setVisible(true);
+                          String f1 = cname.getText();
+             String f2 = cfname.getText();
+             String f3 = cnum.getText();
+             String f4 = caddress.getText();
+             String f5 = chpolice.getText();
+             String f6 = shoname.getText();
+             String f7 = place.getText();
+             String f8 = district.getText();
+             String f9 = details.getText();
+             SimpleDateFormat Date = new SimpleDateFormat("dd/MM/yyyy");
+             String f10 = Date.format(dateI.getDate());
+                
+          
+        area1.setText("************************************************************************************************\n");
+        area1.setText(area1.getText()+"**                                                              FIR  Report                                                   **\n");
+        area1.setText(area1.getText()+"************************************************************************************************\n");
+        
+       
+        
+        area1.setText(area1.getText()+"  FIR Number:  "+f.getFirNumber()+"\n\n");
+        area1.setText(area1.getText()+"  Claimer's Name:  "+f1+"\n");
+        area1.setText(area1.getText()+"  Clamier's Father Name:    "+f2+"\n");
+        area1.setText(area1.getText()+"  Contact Number:      "+f3+"\n");
+        area1.setText(area1.getText()+"  Address:    "+f4+"\n");
+        area1.setText(area1.getText()+"  District:  "+f8+"\n");
+        area1.setText(area1.getText()+"  Police Station:  "+f5+"\n");
+        area1.setText(area1.getText()+"  SHO Name:  "+f6+"\n");
+        area1.setText(area1.getText()+"  Place of Incident:      "+f7+"\n");
+        area1.setText(area1.getText()+"  Details of Incident:    "+f9+"\n");
+        area1.setText(area1.getText()+"\n\n  Date of Incident:  "+f10+"\n");
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -394,6 +422,7 @@ public class FAdd extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea area1;
     private javax.swing.JTextArea caddress;
     private javax.swing.JTextField cfname;
     private javax.swing.JTextField chpolice;
@@ -420,7 +449,6 @@ public class FAdd extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField place;
     private javax.swing.JTextField shoname;
     // End of variables declaration//GEN-END:variables
