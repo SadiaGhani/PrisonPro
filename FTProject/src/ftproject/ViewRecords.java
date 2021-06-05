@@ -86,7 +86,7 @@ public class ViewRecords extends javax.swing.JFrame {
         jButton6.setBounds(220, 520, 270, 31);
 
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton7.setText("Visitor's File");
+        jButton7.setText("Guard's File");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -169,6 +169,7 @@ public class ViewRecords extends javax.swing.JFrame {
         JVIEWFORM jv = new JVIEWFORM();
         this.setVisible(false);
         jv.setVisible(true);
+        jv.addDataToRow();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -181,18 +182,21 @@ public class ViewRecords extends javax.swing.JFrame {
         PVIEWFORM pv = new PVIEWFORM();
         this.setVisible(false);
         pv.setVisible(true);
+        pv.addDataToRow();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-         WAVIEWFORM wav = new WAVIEWFORM();
+        WAVIEWFORM wav = new WAVIEWFORM();
         this.setVisible(false);
         wav.setVisible(true);
+        wav.addDataToRow();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-         DVIEWFORM dv = new DVIEWFORM();
+        DVIEWFORM dv = new DVIEWFORM();
         this.setVisible(false);
         dv.setVisible(true);
+        dv.addDataToRow();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -202,9 +206,10 @@ public class ViewRecords extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        VVIEWFORM vv = new VVIEWFORM();
+        GVIEWFORM vv = new GVIEWFORM();
         this.setVisible(false);
         vv.setVisible(true);
+        vv.addDataToRow();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**

@@ -111,7 +111,7 @@ public class JLogin extends javax.swing.JFrame {
         jusername = jUname.getText();
         jpassword = jPass.getText();
         
-       if(jusername.equals("1") && jpassword.equals("1"))
+       if(lg.credentials(jusername, jpassword) )
         {
             JOptionPane.showMessageDialog(null,"Logged In Successfully!!");
              

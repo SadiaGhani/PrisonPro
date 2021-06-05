@@ -5,6 +5,8 @@
  */
 package ftproject;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -13,20 +15,42 @@ import javax.swing.JOptionPane;
  * @author MASTER COMPUTERS
  */
 public class Login extends Jailors {
-    
+
     String a;
     String b;
     ArrayList<Jailors> j = FTProject.JaiList;
-    public  boolean credentials(String a, String b)
-    {
-        boolean flag = false;
-        for (int i = 0; i < j.size(); i++) {
-            if (a.equals(FTProject.JaiList.get(i).getJUserName()) && b.equals(FTProject.JaiList.get(i).getJPassword()) ) {
 
-                flag = true;
-            } 
+    public boolean credentials(String a, String b) {
+
+        try {
+            boolean flag = false;
+            FileReader read = new FileReader("Jailors.txt");
+            BufferedReader buffer = new BufferedReader(read);
+          
+            String line = buffer.readLine();
+         
+            while (line != null || line != "") 
+            { 
+                
+                System.out.println("in loop");
+                String[] token = line.split(",");
+                if (token[6].equals(a) && token[7].equals(b)) 
+                {
+                   
+                    return true;
+                   
+                } else 
+                {
+                
+                    flag = false;
+                }
+                line = buffer.readLine();
+            }
+
+            return flag;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Invalid");
         }
-        return flag;
+    return false;
     }
-    }
-
+}

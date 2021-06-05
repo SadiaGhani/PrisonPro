@@ -323,17 +323,17 @@ public class FAdd extends javax.swing.JFrame {
                   
                  try{
                  FileWriter fw = new FileWriter("FIR.txt",true);
-                     fw.write("FIR Number: "+f.getFirNumber()+"\n");
-                     fw.write("Claimer's Name: "+f1+"\n");
-                     fw.write("Clamier's Father Name: "+f2+"\n");
-                     fw.write("Contact Number: "+f3+"\n");                    
-                     fw.write("Address: "+f5+"\n");
-                     fw.write("District: "+f8+"\n");
-                     fw.write("Police Station: "+f5+"\n");                     
-                     fw.write("SHO Name: "+f6+"\n");
-                     fw.write("Place of Incident: "+f7+"\n");
-                     fw.write("Date of Icident: "+f10+"\n");  
-                     fw.write("Details of Incident: "+f9+"\n");
+                     fw.write(f.getFirNumber()+",");
+                     fw.write(f1+",");
+                     fw.write(f2+",");
+                     fw.write(f3+",");                    
+                     fw.write(f5+",");
+                     fw.write(f8+",");
+                     fw.write(f5+",");                     
+                     fw.write(f6+",");
+                     fw.write(f7+",");
+                     fw.write(f10+",");  
+                     fw.write(f9);
                      fw.write(System.getProperty("line.separator"));
                      fw.close();
                      JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+f.getFirNumber());
