@@ -5,6 +5,11 @@
  */
 package ftproject;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author DELL PC
@@ -16,6 +21,45 @@ public class WorkActivity extends javax.swing.JFrame {
      */
     public WorkActivity() {
         initComponents();
+    }
+    public void addDataToRow( String id)
+    {
+        try
+     {
+        DefaultTableModel table = (DefaultTableModel) wtable.getModel();
+        Object Data[] = new Object[4];
+        table.setRowCount(0);
+        
+         FileReader read = new FileReader("Works.txt");
+         BufferedReader buffer = new BufferedReader(read);
+         String line = buffer.readLine();
+       while(line != null)
+       { 
+           
+           String[] token = line.split(",");
+           if(token[0].equals(id))
+           {
+               Data[0] = token[0];
+               Data[1] = token[1];
+               Data[2] = token[2];
+               Data[3] = token[3];
+              
+               table.addRow(Data);
+               break;
+               
+           }
+           line= buffer.readLine();
+       }
+        
+           read.close();
+           buffer.close();
+     }
+     catch( Exception e)
+     {
+        JOptionPane.showMessageDialog(null, "File Not Found");
+     }
+      
+        
     }
 
     /**
@@ -30,8 +74,11 @@ public class WorkActivity extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        wtable = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        wid = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Work Activity");
@@ -39,20 +86,35 @@ public class WorkActivity extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Work Activity of Prisoners ");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        wtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null}
+
             },
             new String [] {
-                "ID", "Name", "Section", "Work Assigned", "Status", "Feedback"
+                "ID", "Name", "Section", "Work Assigned"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(wtable);
 
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Enter ID: ");
+
+        wid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                widActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Search");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -69,8 +131,17 @@ public class WorkActivity extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(jLabel1)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(107, 107, 107)
+                                .addComponent(jLabel2)
+                                .addGap(59, 59, 59)
+                                .addComponent(wid, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(157, 157, 157)
+                                .addComponent(jLabel1)))
+                        .addGap(48, 48, 48)
+                        .addComponent(jButton2)))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -78,9 +149,15 @@ public class WorkActivity extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jLabel1)
-                .addGap(40, 40, 40)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(37, 37, 37)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(wid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton2)))
+                .addGap(36, 36, 36)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
                 .addComponent(jButton1)
                 .addContainerGap(29, Short.MAX_VALUE))
         );
@@ -104,6 +181,15 @@ public class WorkActivity extends javax.swing.JFrame {
             this.setVisible(false);
             wm.setVisible(true);  
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void widActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_widActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_widActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String value = wid.getText();
+        addDataToRow(value);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,9 +228,12 @@ public class WorkActivity extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField wid;
+    private javax.swing.JTable wtable;
     // End of variables declaration//GEN-END:variables
 }

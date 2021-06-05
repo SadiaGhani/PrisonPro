@@ -5,6 +5,11 @@
  */
 package ftproject;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Mask
@@ -16,6 +21,45 @@ public class SearchGuardForm extends javax.swing.JFrame {
      */
     public SearchGuardForm() {
         initComponents();
+    }
+    public void addDataToRow( String id)
+    {
+        try
+     {
+        DefaultTableModel table = (DefaultTableModel) gtable.getModel();
+        Object Data[] = new Object[5];
+        table.setRowCount(0);
+        
+         FileReader read = new FileReader("Guards.txt");
+         BufferedReader buffer = new BufferedReader(read);
+         String line = buffer.readLine();
+       while(line != null)
+       { 
+           
+           String[] token = line.split(",");
+           if(token[0].equals(id))
+           {
+               Data[0] = token[0];
+               Data[1] = token[1];
+               Data[2] = token[2];
+               Data[3] = token[3];
+               Data[4] = token[8];
+               table.addRow(Data);
+               break;
+               
+           }
+           line= buffer.readLine();
+       }
+        
+           read.close();
+           buffer.close();
+     }
+     catch( Exception e)
+     {
+        JOptionPane.showMessageDialog(null, "File Not Found");
+     }
+      
+        
     }
 
     /**
@@ -32,10 +76,10 @@ public class SearchGuardForm extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        gid = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        gtable = new javax.swing.JTable();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel1.setText("SEARCH GUARD");
@@ -48,7 +92,7 @@ public class SearchGuardForm extends javax.swing.JFrame {
         jButton1.setBackground(java.awt.Color.blue);
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("OK");
+        jButton1.setText("Search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -68,24 +112,24 @@ public class SearchGuardForm extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel9.setText("ID TO SEARCH");
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        gid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                gidActionPerformed(evt);
             }
         });
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel10.setText("Search Guard");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        gtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "Name", "Age", "Gender", "Section", "Date Out"
+                "ID", "Name", "Age", "Contact #", "Shift"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(gtable);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -102,7 +146,7 @@ public class SearchGuardForm extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel9)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(gid, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jButton1)
                             .addComponent(jButton2))
                         .addGap(40, 40, 40))))
@@ -119,7 +163,7 @@ public class SearchGuardForm extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(gid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addGap(14, 14, 14)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,14 +197,13 @@ public class SearchGuardForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       GMenu gm = new GMenu();
-            this.setVisible(false);
-            gm.setVisible(true); 
+       String value = gid.getText();
+       addDataToRow(value);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void gidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_gidActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         GMenu gm = new GMenu();
@@ -205,6 +248,8 @@ public class SearchGuardForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField gid;
+    private javax.swing.JTable gtable;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -212,7 +257,5 @@ public class SearchGuardForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }

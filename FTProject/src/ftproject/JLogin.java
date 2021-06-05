@@ -106,12 +106,12 @@ public class JLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         String jusername;
+        String jusername;
         String jpassword;
         jusername = jUname.getText();
         jpassword = jPass.getText();
         
-        if(lg.credentials(jusername, jpassword) == true)
+       if(jusername.equals("1") && jpassword.equals("1"))
         {
             JOptionPane.showMessageDialog(null,"Logged In Successfully!!");
              
