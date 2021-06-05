@@ -6,8 +6,7 @@
 package ftproject;
 
 import java.io.FileWriter;
-import java.util.ArrayList;
-import static java.util.Collections.list;
+import java.util.LinkedList;
 import javax.swing.JOptionPane;
 
 /**
@@ -215,7 +214,7 @@ public class DAdd extends javax.swing.JFrame {
              String d4 = dnum.getText();
              int d5 = Integer.parseInt(dtime.getText());
             double d6 = Double.parseDouble(dsalary.getText());
-            ArrayList<Doctors> doc = FTProject.DocList;
+            LinkedList<Doctors> doc = FTProject.DocList;
              boolean b1,b2,b3,b4,b5,b6;
              b1= d.setDName(d1);
              b2 = d.setDAge(d2);

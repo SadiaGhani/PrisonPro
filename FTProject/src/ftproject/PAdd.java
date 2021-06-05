@@ -7,7 +7,7 @@ package ftproject;
 
 import java.io.FileWriter;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class PAdd extends javax.swing.JFrame {
     
-    ArrayList<Prisoners> pri= FTProject.PriList;
+    LinkedList<Prisoners> pri= FTProject.PriList;
     Prisoners p = new Prisoners();
 
     /**
