@@ -1,3 +1,4 @@
 G-783,Abdullah,39,03456798724,Lahore Pakistan,8 years,12,Night
 G-454,Uqba,39,03002456876,Phoolnagar Pakistan,5 years,8,Day
 G-296,Monir,50,03245678901,Multan Pakistan,6 years,6,Night
+G-223,Zahid Rana,49,12345678901,Khudia Chak #41,5 years,8,Night

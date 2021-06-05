@@ -1,1 +1,2 @@
-F-27251,Bilal Mehmood,Mehmood khan,03456789021,Kasur,kasur,Kasur,Ahmed ali,Kasur Road,02/06/2021,rubbery
+F-36321,Maria,Ghani,03098765432,Pattoki Kasur,Kasur,City Thana,Tahir,Main By pass,Rubbery,02/06/2021
+F-59444,zahida,Ali,03456789012,House # 34 Peshawar,Peshawar,Mughal Police Station,Hera Khan,Bridge road,Stole Things,01/06/2021

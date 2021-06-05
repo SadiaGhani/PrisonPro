@@ -5,6 +5,8 @@
  */
 package ftproject;
 
+import java.util.Random;
+
 /**
  *
  * @author Mask
@@ -14,8 +16,38 @@ public class Visitors {
     private String VCnic;
     private String VRelation;
     private String VContact;
+    private String VId;
 
     //setters and getters
+    
+    
+     public String  GenerateVId()
+    {
+        String s = "V-";
+        Random rand = new Random();
+        for(int i = 0 ; i < 3 ; i++)
+        {
+            s +=rand.nextInt(9)+1;           
+          
+        }
+            
+         this.VId = s;   
+        
+        return s;
+    }
+    
+    public void setVId()
+    {
+        String id = GenerateVId();
+        this.VId = id;
+        
+    }
+
+    public String getVId() {
+        return VId;
+    }
+    
+    
     public String getVName() {
         return VName;
     }

@@ -326,14 +326,15 @@ public class FAdd extends javax.swing.JFrame {
                      fw.write(f.getFirNumber()+",");
                      fw.write(f1+",");
                      fw.write(f2+",");
-                     fw.write(f3+",");                    
-                     fw.write(f5+",");
-                     fw.write(f8+",");
-                     fw.write(f5+",");                     
+                     fw.write(f3+",");  
+                     fw.write(f4+",");
+                     fw.write(f8+",");  
+                     fw.write(f5+",");                                                          
                      fw.write(f6+",");
                      fw.write(f7+",");
-                     fw.write(f10+",");  
-                     fw.write(f9);
+                     fw.write(f9+",");
+                     fw.write(f10);  
+                     
                      fw.write(System.getProperty("line.separator"));
                      fw.close();
                      JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+f.getFirNumber());

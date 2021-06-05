@@ -5,6 +5,11 @@
  */
 package ftproject;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author DELL PC
@@ -16,6 +21,47 @@ public class SPSearch extends javax.swing.JFrame {
      */
     public SPSearch() {
         initComponents();
+    }
+    
+    public void addDataToRow( String id)
+    {
+        try
+     {
+        DefaultTableModel table = (DefaultTableModel) sptable.getModel();
+        Object Data[] = new Object[6];
+        table.setRowCount(0);
+        
+         FileReader read = new FileReader("SickPrisoners.txt");
+         BufferedReader buffer = new BufferedReader(read);
+         String line = buffer.readLine();
+       while(line != null)
+       { 
+           
+           String[] token = line.split(",");
+           if(token[0].equals(id))
+           {
+               Data[0] = token[0];
+               Data[1] = token[1];
+               Data[2] = token[2];
+               Data[3] = token[3];
+               Data[4] = token[4];
+               Data[5] = token[5];
+               table.addRow(Data);
+               break;
+               
+           }
+           line= buffer.readLine();
+       }
+        
+           read.close();
+           buffer.close();
+     }
+     catch( Exception e)
+     {
+        JOptionPane.showMessageDialog(null, "File Not Found");
+     }
+      
+        
     }
 
     /**
@@ -30,10 +76,10 @@ public class SPSearch extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        spid = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        sptable = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,16 +91,21 @@ public class SPSearch extends javax.swing.JFrame {
         jLabel2.setText("Enter Id");
 
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        sptable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "ID", "Name", "Section", "Gender", "Disease"
+                "ID", "Name", "Gender", "Section", "Doctor Name", "Disease"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(sptable);
 
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +127,7 @@ public class SPSearch extends javax.swing.JFrame {
                         .addGap(116, 116, 116)
                         .addComponent(jLabel2)
                         .addGap(87, 87, 87)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(spid, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(98, 98, 98)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -95,7 +146,7 @@ public class SPSearch extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGap(32, 32, 32)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,6 +174,11 @@ public class SPSearch extends javax.swing.JFrame {
             this.setVisible(false);
             spm.setVisible(true); 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       String in = spid.getText();
+       addDataToRow(in);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,7 +222,7 @@ public class SPSearch extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField spid;
+    private javax.swing.JTable sptable;
     // End of variables declaration//GEN-END:variables
 }

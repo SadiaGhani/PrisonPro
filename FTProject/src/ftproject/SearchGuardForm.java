@@ -29,33 +29,41 @@ public class SearchGuardForm extends javax.swing.JFrame {
         DefaultTableModel table = (DefaultTableModel) gtable.getModel();
         Object Data[] = new Object[5];
         table.setRowCount(0);
-        
+       
          FileReader read = new FileReader("Guards.txt");
          BufferedReader buffer = new BufferedReader(read);
          String line = buffer.readLine();
-       while(line != null)
+         while(line != null || line != "")
        { 
-           
+          
            String[] token = line.split(",");
            if(token[0].equals(id))
            {
-               Data[0] = token[0];
-               Data[1] = token[1];
-               Data[2] = token[2];
-               Data[3] = token[3];
-               Data[4] = token[8];
+              
+              Data[0] = token[0];
+              Data[1] = token[1];
+              Data[2] = token[2];
+              Data[3] = token[3];
+              
+              Data[4] = token[7];
+              
+              
                table.addRow(Data);
                break;
                
            }
+           
            line= buffer.readLine();
+          
        }
-        
+      
+         
            read.close();
            buffer.close();
      }
      catch( Exception e)
      {
+         
         JOptionPane.showMessageDialog(null, "File Not Found");
      }
       

@@ -5,6 +5,9 @@
  */
 package ftproject;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 /**
  *
  * @author Mask
@@ -18,6 +21,51 @@ public class FIRVIEWFORM extends javax.swing.JFrame {
         initComponents();
     }
 
+     public void readData()
+    {
+        try
+     {
+       
+        
+         FileReader read = new FileReader("FIR.txt");
+         BufferedReader buffer = new BufferedReader(read);
+         String line = buffer.readLine();
+       while(line != null)
+       { 
+           
+           String[] token = line.split(",");
+           
+        area.setText("\n************************************************************************************************\n");
+        area.setText(area.getText()+"**                                                              FIR  Report                                                   **\n");
+        area.setText(area.getText()+"************************************************************************************************\n");        
+        area.setText(area.getText()+"  FIR Number:  "+token[0]+"\n\n");
+        area.setText(area.getText()+"  Claimer's Name:  "+token[1]+"\n");
+        area.setText(area.getText()+"  Clamier's Father Name:    "+token[2]+"\n");
+        area.setText(area.getText()+"  Contact Number:      "+token[3]+"\n");
+        area.setText(area.getText()+"  Address:    "+token[4]+"\n");
+        area.setText(area.getText()+"  District:  "+token[5]+"\n");
+        area.setText(area.getText()+"  Police Station:  "+token[6]+"\n");
+        area.setText(area.getText()+"  SHO Name:  "+token[7]+"\n");
+        area.setText(area.getText()+"  Place of Incident:      "+token[8]+"\n");
+        area.setText(area.getText()+"  Details of Incident:    "+token[9]);
+        area.setText(area.getText()+"\n\n  Date of Incident:  "+token[10]+"\n");
+              
+               
+           
+        line= buffer.readLine();
+       }
+        
+           read.close();
+           buffer.close();
+     }
+     catch( Exception e)
+     {
+        System.out.println("File Not Found!!");
+     }
+      
+        
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,8 +77,8 @@ public class FIRVIEWFORM extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        area = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FIR's Files");
@@ -38,7 +86,7 @@ public class FIRVIEWFORM extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setText("FIR'S RECORD");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("BACK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,42 +94,37 @@ public class FIRVIEWFORM extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "FIR number", "Claimer's name", "Contact no.", "Incident's place", "Incident time", "SHO name"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        area.setColumns(20);
+        area.setRows(5);
+        jScrollPane2.setViewportView(area);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(21, 21, 21))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(199, 199, 199))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(233, 233, 233)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                .addGap(35, 35, 35)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -129,9 +172,9 @@ public class FIRVIEWFORM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea area;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

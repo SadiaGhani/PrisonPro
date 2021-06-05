@@ -303,9 +303,7 @@ public class AddGuardForm extends javax.swing.JFrame {
                      fw.write(System.getProperty("line.separator"));
                      fw.close();
                      JOptionPane.showMessageDialog(null, " Your guard is added successfully on the ID "+"\n"+g.getGID());
-                      GMenu gm = new GMenu();
-                       this.setVisible(false);
-                       gm.setVisible(true);  
+                       
                  
                  }
                  catch(Exception ex)

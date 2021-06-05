@@ -5,6 +5,11 @@
  */
 package ftproject;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author DELL PC
@@ -17,7 +22,48 @@ public class VSearch extends javax.swing.JFrame {
     public VSearch() {
         initComponents();
     }
-
+    
+    public void addDataToRow( String id)
+    {
+        try
+     {
+        DefaultTableModel table = (DefaultTableModel) vstable.getModel();
+        Object Data[] = new Object[5];
+        table.setRowCount(0);
+        
+         FileReader read = new FileReader("Visitors.txt");
+         BufferedReader buffer = new BufferedReader(read);
+         String line = buffer.readLine();
+       while(line != null)
+       { 
+           
+           String[] token = line.split(",");
+           if(token[0].equals(id))
+           {
+               Data[0] = token[0];
+               Data[1] = token[1];
+               Data[2] = token[2];
+               Data[3] = token[3];
+               Data[4] = token[4];
+               table.addRow(Data);
+               break;
+               
+           }
+           line= buffer.readLine();
+       }
+        
+           read.close();
+           buffer.close();
+     }
+     catch( Exception e)
+     {
+        JOptionPane.showMessageDialog(null, "File Not Found");
+     }
+      
+        
+    }
+  
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,7 +79,7 @@ public class VSearch extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        vstable = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,16 +91,21 @@ public class VSearch extends javax.swing.JFrame {
         jLabel2.setText("Enter Id");
 
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        vstable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null}
+
             },
             new String [] {
-                "Name", "Age", "Contact #", "Relation"
+                "ID", "Name", "CNIC", "Contact #", "Relation"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(vstable);
 
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -126,6 +177,11 @@ public class VSearch extends javax.swing.JFrame {
             vm.setVisible(true); 
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String in = jTextField1.getText();
+        addDataToRow(in);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -168,7 +224,7 @@ public class VSearch extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTable vstable;
     // End of variables declaration//GEN-END:variables
 }

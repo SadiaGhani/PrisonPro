@@ -53,7 +53,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(250, 170, 210, 29);
+        jButton1.setBounds(90, 160, 210, 29);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton4.setText("Work Activity Files");
@@ -63,7 +63,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(250, 350, 210, 31);
+        jButton4.setBounds(90, 390, 210, 31);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton5.setText("Doctor's File");
@@ -73,7 +73,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(250, 410, 210, 31);
+        jButton5.setBounds(340, 330, 210, 31);
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton6.setText("Sick Prisoner's Files");
@@ -83,7 +83,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(220, 520, 270, 31);
+        jButton6.setBounds(190, 510, 270, 31);
 
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton7.setText("Guard's File");
@@ -93,13 +93,12 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton7);
-        jButton7.setBounds(250, 470, 210, 31);
+        jButton7.setBounds(340, 430, 210, 31);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setText("This Record is Read Only");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(130, 110, 250, 22);
+        jLabel3.setBounds(140, 110, 300, 29);
 
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton8.setText("BACK");
@@ -109,7 +108,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton8);
-        jButton8.setBounds(300, 580, 93, 29);
+        jButton8.setBounds(270, 580, 93, 29);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton3.setText("Prisoner's File");
@@ -119,7 +118,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(250, 290, 210, 31);
+        jButton3.setBounds(90, 270, 210, 31);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("FIR's File");
@@ -129,7 +128,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(250, 230, 210, 31);
+        jButton2.setBounds(340, 210, 210, 31);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -176,6 +175,7 @@ public class ViewRecords extends javax.swing.JFrame {
         FIRVIEWFORM fiv = new FIRVIEWFORM();
         this.setVisible(false);
         fiv.setVisible(true);
+        fiv.readData();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -203,6 +203,7 @@ public class ViewRecords extends javax.swing.JFrame {
         SPVIEWFORM spv = new SPVIEWFORM();
         this.setVisible(false);
         spv.setVisible(true);
+        spv.addDataToRow();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed

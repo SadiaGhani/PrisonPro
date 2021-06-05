@@ -5,14 +5,20 @@
  */
 package ftproject;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+
+
 
 /**
  *
  * @author DELL PC
  */
 public class VAdd extends javax.swing.JFrame {
+    
+    ArrayList<Visitors> list = FTProject.VList;
+    Visitors v = new Visitors();
 
     /**
      * Creates new form VAdd
@@ -172,8 +178,7 @@ public class VAdd extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
       
-          Visitors v = new Visitors();
-          ArrayList<Visitors> list = FTProject.VList;
+        
           String v1 = Vname.getText();
           String v2 = Vcnic.getText();
           String v3 = Vnum.getText();
@@ -183,14 +188,31 @@ public class VAdd extends javax.swing.JFrame {
           b2 = v.setVCnic(v2);
           b3 = v.setVContact(v3);
           b4 = v.setVRelation(v4);
+          v.setVId();
           if(b1==true&&b2==true&&b3==true&&b4==true)
           {
               list.add(v);
               FTProject.VList = list;
-               JOptionPane.showMessageDialog(null, " Your visitor is added successfully!!");
-               VMenu vm = new VMenu();
-              this.setVisible(false);
-              vm.setVisible(true); 
+               
+                try{
+                 FileWriter fw = new FileWriter("Visitors.txt",true);
+                     fw.write(v.getVId()+",");
+                     fw.write(v1+",");
+                     fw.write(v2+",");
+                     fw.write(v3+",");
+                     fw.write(v4);
+                     
+                    
+                     fw.write(System.getProperty("line.separator"));
+                     fw.close();
+                     JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+v.getVId());
+                       
+                 
+                 }
+                 catch(Exception ex)
+                 {
+                     JOptionPane.showMessageDialog(null, " data is not added in file");
+                 }
           }
           else
           {

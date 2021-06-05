@@ -6,6 +6,10 @@
 package ftproject;
 
 import static ftproject.FTProject.PriList;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -19,6 +23,49 @@ public class PSearch extends javax.swing.JFrame {
     public PSearch() {
         initComponents();
     }
+    
+    
+    public void addDataToRow( String id)
+    {
+        try
+     {
+        DefaultTableModel table = (DefaultTableModel) pstable.getModel();
+        Object Data[] = new Object[6];
+        table.setRowCount(0);
+        
+         FileReader read = new FileReader("Prisoners.txt");
+         BufferedReader buffer = new BufferedReader(read);
+         String line = buffer.readLine();
+       while(line != null)
+       { 
+           
+           String[] token = line.split(",");
+           if(token[0].equals(id))
+           {
+               Data[0] = token[0];
+               Data[1] = token[1];
+               Data[2] = token[2];
+               Data[3] = token[3];
+               Data[4] = token[5];
+               Data[5] = token[9];
+               table.addRow(Data);
+               break;
+               
+           }
+           line= buffer.readLine();
+       }
+        
+           read.close();
+           buffer.close();
+     }
+     catch( Exception e)
+     {
+        JOptionPane.showMessageDialog(null, "File Not Found");
+     }
+      
+        
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,10 +79,10 @@ public class PSearch extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        input = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        pstable = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
 
@@ -59,8 +106,8 @@ public class PSearch extends javax.swing.JFrame {
         jLabel1.setText("Search Prisoner's Record");
         jPanel3.add(jLabel1);
         jLabel1.setBounds(80, 20, 500, 44);
-        jPanel3.add(jTextField1);
-        jTextField1.setBounds(286, 90, 170, 26);
+        jPanel3.add(input);
+        input.setBounds(286, 90, 170, 26);
 
         jButton1.setText("Search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +118,7 @@ public class PSearch extends javax.swing.JFrame {
         jPanel3.add(jButton1);
         jButton1.setBounds(490, 90, 79, 29);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        pstable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -79,7 +126,7 @@ public class PSearch extends javax.swing.JFrame {
                 "ID", "Name", "Age", "Gender", "Section", "Date Out"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(pstable);
 
         jPanel3.add(jScrollPane1);
         jScrollPane1.setBounds(20, 150, 570, 180);
@@ -119,7 +166,8 @@ public class PSearch extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        String in = input.getText();
+        addDataToRow(in);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -159,6 +207,7 @@ public class PSearch extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField input;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -166,7 +215,6 @@ public class PSearch extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTable pstable;
     // End of variables declaration//GEN-END:variables
 }
