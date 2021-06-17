@@ -17,16 +17,67 @@ import java.util.*;
 
 public class FTProject {
 //doctor mamay ki arraylist
- public static LinkedList<Doctors>  DocList = new LinkedList<Doctors>();
- public static LinkedList<Prisoners>  PriList = new LinkedList<Prisoners>();
- public static ArrayList<FIR>  FirList = new ArrayList<FIR>();
- public static ArrayList<Visitors>  VList = new ArrayList<Visitors>();
- public static ArrayList<Guards>  GList = new ArrayList<Guards>();   
- public static ArrayList<Jailors>  JaiList = new ArrayList<Jailors>();  
- public static ArrayList<Works>  WorkList = new ArrayList<Works>();
- public static ArrayList<SickPrisoners>  SickList = new ArrayList<SickPrisoners>();
+   private  static FTProject instance;
+ private  LinkedList<Doctors>  DocList ;
+ private LinkedList<Prisoners>  PriList; 
+ private ArrayList<FIR>  FirList ;
+ private ArrayList<Visitors>  VList;
+ private ArrayList<Guards>  GList ;  
+ private ArrayList<Jailors>  JaiList; 
+ private ArrayList<Works>  WorkList ;
+ private ArrayList<SickPrisoners>  SickList; 
+
+    public LinkedList<Doctors> getDocList() {
+        return DocList;
+    }
+
+    public LinkedList<Prisoners> getPriList() {
+        return PriList;
+    }
+
+    public ArrayList<FIR> getFirList() {
+        return FirList;
+    }
+
+    public ArrayList<Visitors> getVList() {
+        return VList;
+    }
+
+    public ArrayList<Guards> getGList() {
+        return GList;
+    }
+
+    public ArrayList<Jailors> getJaiList() {
+        return JaiList;
+    }
+
+    public ArrayList<Works> getWorkList() {
+        return WorkList;
+    }
+
+    public ArrayList<SickPrisoners> getSickList() {
+        return SickList;
+    }
  
-   
+ public static FTProject getInstance()
+ {
+     if(instance==null)
+         instance = new FTProject();
+     
+     return instance;
+ }
+ 
+   public FTProject()
+   {
+       DocList = new LinkedList<Doctors>();
+       PriList = new LinkedList<Prisoners>();
+       FirList = new ArrayList<FIR>();
+       VList = new ArrayList<Visitors>();
+       GList = new ArrayList<Guards>();
+       JaiList = new ArrayList<Jailors>();
+       WorkList = new ArrayList<Works>();
+       SickList = new ArrayList<SickPrisoners>();
+   }
  
      
     

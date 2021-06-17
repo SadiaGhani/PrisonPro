@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class VAdd extends javax.swing.JFrame {
     
-    ArrayList<Visitors> list = FTProject.VList;
+
     Visitors v = new Visitors();
 
     /**
@@ -191,8 +191,8 @@ public class VAdd extends javax.swing.JFrame {
           v.setVId();
           if(b1==true&&b2==true&&b3==true&&b4==true)
           {
-              list.add(v);
-              FTProject.VList = list;
+             // list.add(v);
+              FTProject.getInstance().getVList().add(v);
                
                 try{
                  FileWriter fw = new FileWriter("Visitors.txt",true);

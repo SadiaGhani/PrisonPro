@@ -31,9 +31,7 @@ public class Prisoners {
         for(int i = 0 ; i < 3 ; i++)
         {
             s +=rand.nextInt(9)+1;
-            
-            
-        }
+                  }
             
          this.PId = s;   
         

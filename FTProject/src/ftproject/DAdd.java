@@ -214,7 +214,7 @@ public class DAdd extends javax.swing.JFrame {
              String d4 = dnum.getText();
              int d5 = Integer.parseInt(dtime.getText());
             double d6 = Double.parseDouble(dsalary.getText());
-            LinkedList<Doctors> doc = FTProject.DocList;
+            
              boolean b1,b2,b3,b4,b5,b6;
              b1= d.setDName(d1);
              b2 = d.setDAge(d2);
@@ -225,8 +225,8 @@ public class DAdd extends javax.swing.JFrame {
              if(b1==true&&b2==true&&b3==true&&b4==true&&b5==true)
              {
                  
-                 doc.add(d);
-                 FTProject.DocList = doc;
+                
+                 FTProject.getInstance().getDocList().add(d);
                  try{
                  FileWriter fw = new FileWriter("Doctors.txt",true);
                      fw.write(d.getDId()+",");

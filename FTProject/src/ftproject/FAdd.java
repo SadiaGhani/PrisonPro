@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class FAdd extends javax.swing.JFrame {
 
     
-    ArrayList<FIR> Fir = FTProject.FirList;
+   // ArrayList<FIR> Fir = FTProject.FirList;
     FIR f = new FIR();
     /**
      * Creates new form FAdd
@@ -318,8 +318,8 @@ public class FAdd extends javax.swing.JFrame {
              
              if(t1 == true && t2 == true && t3 == true && t4 == true && t5 ==true && t6 == true && t7 == true && t8 == true && t9 ==true )
              {
-                 Fir.add(f);
-                 FTProject.FirList = Fir;
+                 
+                 FTProject.getInstance().getFirList().add(f);
                   
                  try{
                  FileWriter fw = new FileWriter("FIR.txt",true);

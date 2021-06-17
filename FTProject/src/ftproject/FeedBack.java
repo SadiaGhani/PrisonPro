@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author DELL PC
  */
 public class FeedBack extends javax.swing.JFrame {
-ArrayList<Works> pw = FTProject.WorkList;
+//ArrayList<Works> pw = FTProject.WorkList;
     Works w = new Works();
     /**
      * Creates new form FeedBack
@@ -154,8 +154,8 @@ ArrayList<Works> pw = FTProject.WorkList;
           
           if( f1 == true && f2 == true && f3 == true)
           {
-              pw.add(w);
-              FTProject.WorkList = pw;
+             
+              FTProject.getInstance().getWorkList().add(w);
               JOptionPane.showMessageDialog(null, " Data Added Successfully!"); 
           }
           else

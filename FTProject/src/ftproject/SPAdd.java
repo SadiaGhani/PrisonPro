@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  * @author DELL PC
  */
 public class SPAdd extends javax.swing.JFrame {
-ArrayList<SickPrisoners> sick = FTProject.SickList;
+//ArrayList<SickPrisoners> sick = FTProject.SickList;
 SickPrisoners s = new SickPrisoners();
 
     /**
@@ -218,8 +218,8 @@ SickPrisoners s = new SickPrisoners();
         
         if( f1 == true && f2 == true && f3 == true && f4 == true )
         {
-            sick.add(s);
-            FTProject.SickList = sick;
+            //sick.add(s);
+            FTProject.getInstance().getSickList().add(s);
                try{
                  FileWriter fw = new FileWriter("SickPrisoners.txt",true);
                      fw.write(s.getDId()+",");

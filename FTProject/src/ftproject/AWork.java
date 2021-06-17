@@ -6,7 +6,6 @@
 package ftproject;
 
 import java.io.FileWriter;
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class AWork extends javax.swing.JFrame {
   
-    ArrayList<Works> pw = FTProject.WorkList;
+    
     Works w = new Works();
     /**
      * Creates new form AWork
@@ -167,8 +166,8 @@ public class AWork extends javax.swing.JFrame {
         
         if(f1 == true && f2 == true && f3 == true)
         {
-            pw.add(w);
-            FTProject.WorkList = pw;
+        
+            FTProject.getInstance().getWorkList().add(w);
             
              try{
                  FileWriter fw = new FileWriter("Works.txt",true);

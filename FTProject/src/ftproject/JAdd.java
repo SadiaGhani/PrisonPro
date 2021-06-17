@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  * @author DELL PC
  */
 public class JAdd extends javax.swing.JFrame {
-  ArrayList<Jailors> jailor = FTProject.JaiList;
+ 
   Jailors j = new Jailors();
     /**
      * Creates new form JAdd
@@ -235,6 +235,7 @@ public class JAdd extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String j1 = jname.getText();
+    
         int j2 = Integer.parseInt(jage.getText());
         String j3 = "";
         if (jmale.isSelected()) {
@@ -257,8 +258,9 @@ public class JAdd extends javax.swing.JFrame {
         j.setJId();
         if( f1 == true && f2 == true && f3 == true && f4 == true && f5 == true && f6 == true)
         {
-            jailor.add(j);
-            FTProject.JaiList =jailor;
+          
+             FTProject.getInstance().getJaiList().add(j);
+           
             
              try{
                  FileWriter fw = new FileWriter("Jailors.txt",true);
@@ -269,8 +271,7 @@ public class JAdd extends javax.swing.JFrame {
                      fw.write(j4+",");
                      fw.write(j5+",");
                      fw.write(j6+",");
-                     fw.write(j7);                    
-                                       
+                     fw.write(j7);                
                      fw.write(System.getProperty("line.separator"));
                      fw.close();
                      JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+j.getJId());

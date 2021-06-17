@@ -18,7 +18,7 @@ public class Login extends Jailors {
 
     String a;
     String b;
-    ArrayList<Jailors> j = FTProject.JaiList;
+   
 
     public boolean credentials(String a, String b) {
 

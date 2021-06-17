@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class PAdd extends javax.swing.JFrame {
     
-    LinkedList<Prisoners> pri= FTProject.PriList;
+  
     Prisoners p = new Prisoners();
 
     /**
@@ -269,8 +269,8 @@ public class PAdd extends javax.swing.JFrame {
               p.setPId();
               if( f1 == true && f2 == true && f3 == true && f4 == true && f5 ==true && f6 == true)
               {
-                  pri.add(p);
-                  FTProject.PriList = pri;
+                 
+                  FTProject.getInstance().getPriList().add(p);
                   
                   try{
                  FileWriter fw = new FileWriter("Prisoners.txt",true);

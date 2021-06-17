@@ -5,7 +5,7 @@
  */
 package ftproject;
 
-import static ftproject.FTProject.PriList;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import javax.swing.JOptionPane;

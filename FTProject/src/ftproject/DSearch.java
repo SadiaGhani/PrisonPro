@@ -24,7 +24,7 @@ public class DSearch extends javax.swing.JFrame {
     }
  public void addDataToRow( String id)
 {
-try
+        try
         {
             DefaultTableModel table = (DefaultTableModel) dt.getModel();
             Object Data[] = new Object[4];
