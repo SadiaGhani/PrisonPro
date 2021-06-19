@@ -42,6 +42,12 @@ public class Visitors {
         this.VId = id;
         
     }
+    public void setFVId( String id)
+    {
+       
+        this.VId = id;
+        
+    }
 
     public String getVId() {
         return VId;

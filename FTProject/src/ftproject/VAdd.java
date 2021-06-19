@@ -194,25 +194,9 @@ public class VAdd extends javax.swing.JFrame {
              // list.add(v);
               FTProject.getInstance().getVList().add(v);
                
-                try{
-                 FileWriter fw = new FileWriter("Visitors.txt",true);
-                     fw.write(v.getVId()+",");
-                     fw.write(v1+",");
-                     fw.write(v2+",");
-                     fw.write(v3+",");
-                     fw.write(v4);
-                     
-                    
-                     fw.write(System.getProperty("line.separator"));
-                     fw.close();
-                     JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+v.getVId());
-                       
-                 
-                 }
-                 catch(Exception ex)
-                 {
-                     JOptionPane.showMessageDialog(null, " data is not added in file");
-                 }
+               
+               FTProject.getInstance().writeDataVisitors();
+                JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+v.getVId());
           }
           else
           {

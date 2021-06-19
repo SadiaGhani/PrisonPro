@@ -221,35 +221,16 @@ public class DAdd extends javax.swing.JFrame {
              b3 = d.setDDtime(d5);
              b4 = d.setDSalary(d6);
              b5 = d.setDContact(d4);
+             d.setGender(d3);
               d.setDID();
              if(b1==true&&b2==true&&b3==true&&b4==true&&b5==true)
              {
                  
                 
                  FTProject.getInstance().getDocList().add(d);
-                 try{
-                 FileWriter fw = new FileWriter("Doctors.txt",true);
-                     fw.write(d.getDId()+",");
-                     fw.write(d1+",");
-                     fw.write(d3+",");
-                     fw.write(d2+",");
-                     fw.write(d4+",");
-                     fw.write(d5+",");
-                     fw.write(""+d6);
-                    
-                    
-                     fw.write(System.getProperty("line.separator"));
-                     fw.close();
-                     JOptionPane.showMessageDialog(null, " Your doctor is added successfully on the ID "+"\n"+d.getDId());
-                     DMenu dm = new DMenu();
-                    this.setVisible(false);
-                    dm.setVisible(true);  
-                 
-                 }
-                 catch(Exception ex)
-                 {
-                     JOptionPane.showMessageDialog(null, " data is not added in file");
-                 }
+               
+                FTProject.getInstance().writeDataDoctors();
+                JOptionPane.showMessageDialog(null, " Your doctor is added successfully on the ID "+"\n"+d.getDId());
                  
                  
                  

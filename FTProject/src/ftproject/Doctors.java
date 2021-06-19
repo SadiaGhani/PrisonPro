@@ -18,8 +18,18 @@ public class Doctors {
     private double DSalary;
     private int DDtime;
     private String DId;
+    private String gender;
     //getters and setters
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+   
+    
     public String getDName() {
         return DName;
     }
@@ -106,7 +116,7 @@ public class Doctors {
 
     public boolean setDDtime(int DDtime) {
         boolean f = false;
-        if(DDtime>=2&&DDtime<=24)
+        if(DDtime >=2 && DDtime <= 24)
         {
             f = true;
         this.DDtime = DDtime;
@@ -132,6 +142,12 @@ public class Doctors {
          this.DId = s;   
         
         return s;
+    }
+    
+    public void setFDID(String id)
+    {
+        this.DId = id;
+        
     }
     
     public void setDID()
