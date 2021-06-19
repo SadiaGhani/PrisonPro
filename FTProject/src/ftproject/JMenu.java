@@ -101,15 +101,18 @@ public class JMenu extends javax.swing.JFrame {
         jPanel1.add(jButton7);
         jButton7.setBounds(373, 320, 240, 37);
 
+        jButton8.setBackground(java.awt.Color.darkGray);
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton8.setForeground(java.awt.Color.white);
         jButton8.setText("View Records");
+        jButton8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton8);
-        jButton8.setBounds(373, 400, 240, 37);
+        jButton8.setBounds(373, 400, 240, 50);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton5.setText("Prisoners");
@@ -121,15 +124,18 @@ public class JMenu extends javax.swing.JFrame {
         jPanel1.add(jButton5);
         jButton5.setBounds(380, 140, 230, 37);
 
+        jButton9.setBackground(java.awt.Color.darkGray);
         jButton9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton9.setForeground(java.awt.Color.white);
         jButton9.setText("Back");
+        jButton9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton9);
-        jButton9.setBounds(280, 510, 140, 37);
+        jButton9.setBounds(260, 497, 210, 50);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton4.setText("Visitors");
