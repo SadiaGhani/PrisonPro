@@ -44,7 +44,7 @@ public class ALogin extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
         jPanel1.add(AUname);
-        AUname.setBounds(210, 120, 180, 26);
+        AUname.setBounds(190, 120, 200, 20);
 
         APass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +52,7 @@ public class ALogin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(APass);
-        APass.setBounds(210, 180, 180, 26);
+        APass.setBounds(190, 180, 200, 20);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Username");

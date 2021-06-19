@@ -28,9 +28,7 @@ public class Entrance extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -41,68 +39,65 @@ public class Entrance extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Or:");
-        jPanel2.add(jLabel4);
-        jLabel4.setBounds(130, 270, 40, 22);
-
-        jButton1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        jButton1.setText("Administrator");
+        jButton1.setBackground(java.awt.Color.darkGray);
+        jButton1.setFont(new java.awt.Font("Calibri", 1, 21)); // NOI18N
+        jButton1.setForeground(java.awt.Color.white);
+        jButton1.setText(" ADMIN LOGIN");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.black, 3));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel2.add(jButton1);
-        jButton1.setBounds(200, 160, 200, 39);
+        jButton1.setBounds(190, 127, 240, 50);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Login As:");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(120, 110, 90, 22);
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 34)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.white);
         jLabel1.setText("PRISON MANAGEMENT SYSTEM");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(100, 50, 390, 29);
+        jLabel1.setBounds(40, 40, 580, 50);
 
-        jButton3.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        jButton3.setText("Exit from System");
+        jButton3.setBackground(java.awt.Color.darkGray);
+        jButton3.setFont(new java.awt.Font("Calibri", 1, 21)); // NOI18N
+        jButton3.setForeground(java.awt.Color.white);
+        jButton3.setText("EXIT SYSTEM");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         jPanel2.add(jButton3);
-        jButton3.setBounds(180, 310, 240, 39);
+        jButton3.setBounds(190, 290, 240, 50);
 
-        jButton2.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        jButton2.setText("Jailor");
+        jButton2.setBackground(java.awt.Color.darkGray);
+        jButton2.setFont(new java.awt.Font("Calibri", 1, 21)); // NOI18N
+        jButton2.setForeground(java.awt.Color.white);
+        jButton2.setText("JAILOR LOGIN");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel2.add(jButton2);
-        jButton2.setBounds(200, 220, 200, 39);
+        jButton2.setBounds(190, 209, 240, 50);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/r.jpg"))); // NOI18N
         jLabel2.setText("Login As");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(0, 0, 600, 410);
+        jLabel2.setBounds(0, 0, 610, 380);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
         );
 
         pack();
@@ -168,8 +163,6 @@ public class Entrance extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
