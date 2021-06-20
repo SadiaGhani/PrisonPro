@@ -113,12 +113,16 @@ public class JAdd extends javax.swing.JFrame {
             }
         });
 
+        jmale.setBackground(java.awt.Color.darkGray);
+        jmale.setForeground(java.awt.Color.white);
         jmale.setText("Male");
 
         address.setColumns(20);
         address.setRows(5);
         jScrollPane1.setViewportView(address);
 
+        jfemale.setBackground(java.awt.Color.darkGray);
+        jfemale.setForeground(java.awt.Color.white);
         jfemale.setText("Female");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N

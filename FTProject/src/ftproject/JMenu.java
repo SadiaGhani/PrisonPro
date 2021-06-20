@@ -45,61 +45,76 @@ public class JMenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Jailor's Menu");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(200, 40, 310, 48);
+        jLabel2.setBounds(260, 60, 310, 48);
 
+        jButton2.setBackground(java.awt.Color.darkGray);
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton2.setForeground(java.awt.Color.white);
         jButton2.setText("Guards");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(60, 230, 230, 37);
+        jButton2.setBounds(70, 240, 240, 50);
 
+        jButton1.setBackground(java.awt.Color.darkGray);
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton1.setForeground(java.awt.Color.white);
         jButton1.setText("FIR");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(60, 140, 230, 37);
+        jButton1.setBounds(70, 160, 240, 50);
 
+        jButton3.setBackground(java.awt.Color.darkGray);
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton3.setForeground(java.awt.Color.white);
         jButton3.setText("Doctors");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(60, 320, 230, 37);
+        jButton3.setBounds(70, 320, 240, 50);
 
+        jButton6.setBackground(java.awt.Color.darkGray);
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton6.setForeground(java.awt.Color.white);
         jButton6.setText("Work Activity");
+        jButton6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(380, 230, 230, 37);
+        jButton6.setBounds(380, 240, 240, 50);
 
+        jButton7.setBackground(java.awt.Color.darkGray);
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton7.setForeground(java.awt.Color.white);
         jButton7.setText("Sick Prisoners");
+        jButton7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton7);
-        jButton7.setBounds(373, 320, 240, 37);
+        jButton7.setBounds(380, 320, 240, 50);
 
         jButton8.setBackground(java.awt.Color.darkGray);
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -112,17 +127,20 @@ public class JMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton8);
-        jButton8.setBounds(373, 400, 240, 50);
+        jButton8.setBounds(380, 400, 240, 50);
 
+        jButton5.setBackground(java.awt.Color.darkGray);
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton5.setForeground(java.awt.Color.white);
         jButton5.setText("Prisoners");
+        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(380, 140, 230, 37);
+        jButton5.setBounds(380, 160, 240, 50);
 
         jButton9.setBackground(java.awt.Color.darkGray);
         jButton9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -135,21 +153,27 @@ public class JMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton9);
-        jButton9.setBounds(240, 490, 210, 50);
+        jButton9.setBounds(230, 480, 240, 50);
 
+        jButton4.setBackground(java.awt.Color.darkGray);
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton4.setForeground(java.awt.Color.white);
         jButton4.setText("Visitors");
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(60, 400, 230, 40);
+        jButton4.setBounds(70, 400, 240, 50);
 
+        jLabel1.setBackground(java.awt.Color.darkGray);
+        jLabel1.setForeground(java.awt.Color.white);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/image.jpg"))); // NOI18N
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 700, 587);
+        jLabel1.setBounds(20, -30, 700, 587);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
