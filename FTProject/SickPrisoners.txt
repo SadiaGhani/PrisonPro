@@ -1,2 +1,1 @@
 PS-172,Mr Ali,null,B,Dr Zahid,Fever
-PS-241,Munazza Bibi,null,C,Dr Sehrish,Malyria

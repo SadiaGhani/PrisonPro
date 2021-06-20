@@ -1,3 +1,2 @@
-P-396,Qazi Eesa,52,Male,Kasur Pakistan,B,349,Rubbery,02/06/2021,03/06/2022
 P-162,Noor ,45,Female,kohat Pakistan,C,300,Murder,01/06/2021,03/06/2022
-P-172,Fatima ,48,Female,karachi Pakistan,A,390,Murder,01/09/2021,03/09/2022
+P-943,zaid,34,Male,Kasur Pakistan,A,239,Murder,01/06/2021,10/06/2023

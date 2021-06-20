@@ -5,6 +5,8 @@
  */
 package ftproject;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL PC
@@ -30,7 +32,7 @@ public class PDelete extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        pid = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -76,7 +78,7 @@ public class PDelete extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(36, 36, 36)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(pid, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(63, 63, 63)
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -90,7 +92,7 @@ public class PDelete extends javax.swing.JFrame {
                 .addGap(54, 54, 54)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
@@ -119,9 +121,29 @@ public class PDelete extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        PMenu pm = new PMenu();
-          this.setVisible(false);
-          pm.setVisible(true);
+        String id = pid.getText();
+        boolean flag = false;
+       for(int i=0; i< FTProject.getInstance().getPriList().size(); i++)
+       {
+           if(id.equals(FTProject.getInstance().getPriList().get(i).getPId()))
+           {
+               FTProject.getInstance().getPriList().remove(i);
+               JOptionPane.showMessageDialog(null," Data deleted successfully!!");
+               FTProject.getInstance().writeDataPrisoners();
+               flag = true;
+               break;
+              
+           }
+           else
+           {
+              
+                flag = false;
+           }
+       }
+       if(flag == false)
+       {
+            JOptionPane.showMessageDialog(null,"The ID not Found");
+       }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -165,6 +187,6 @@ public class PDelete extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField pid;
     // End of variables declaration//GEN-END:variables
 }

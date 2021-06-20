@@ -5,6 +5,8 @@
  */
 package ftproject;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL PC
@@ -30,7 +32,7 @@ public class JDelete extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jid = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -52,7 +54,7 @@ public class JDelete extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jid, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -61,7 +63,7 @@ public class JDelete extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
@@ -124,7 +126,7 @@ public class JDelete extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,9 +146,29 @@ public class JDelete extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        AMenu am = new AMenu();
-        this.setVisible(false);
-        am.setVisible(true);
+        String id = jid.getText();
+        boolean flag = false;
+       for(int i=0; i< FTProject.getInstance().getJaiList().size(); i++)
+       {
+           if(id.equals(FTProject.getInstance().getJaiList().get(i).getJId()))
+           {
+               FTProject.getInstance().getJaiList().remove(i);
+               JOptionPane.showMessageDialog(null," Data deleted successfully!!");
+               FTProject.getInstance().writeDataJailors();
+               flag = true;
+               break;
+              
+           }
+           else
+           {
+              
+                flag = false;
+           }
+       }
+       if(flag == false)
+       {
+            JOptionPane.showMessageDialog(null,"The ID not Found");
+       }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -191,6 +213,6 @@ public class JDelete extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jid;
     // End of variables declaration//GEN-END:variables
 }
