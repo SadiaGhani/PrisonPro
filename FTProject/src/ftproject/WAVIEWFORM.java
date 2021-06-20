@@ -49,7 +49,8 @@ public class WAVIEWFORM extends javax.swing.JFrame {
         } 
         catch (Exception e) {
             
-            System.out.println("File Not Found");
+           // System.out.println("File Not Found");
+            JOptionPane.showMessageDialog(null, "Work File Not Found");
            
            
         }

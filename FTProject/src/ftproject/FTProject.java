@@ -373,7 +373,7 @@ public class FTProject {
     {
         try
         {
-             FileWriter fw = new FileWriter("Jailors.txt");
+            FileWriter fw = new FileWriter("Jailors.txt");
             BufferedWriter bw = new BufferedWriter(fw);
             for (int i = 0; i < FTProject.getInstance().JaiList.size(); i++) {
                 bw.write(FTProject.getInstance().JaiList.get(i).getJId() + ",");
@@ -393,6 +393,67 @@ public class FTProject {
             JOptionPane.showMessageDialog(null, "Jailor's File Not Found");
         }
     }
+     // write data in FIR File
+    public static void writeDataFIR()
+    {
+        try {
+            FileWriter fw = new FileWriter("FIR.txt");
+            BufferedWriter bw = new BufferedWriter(fw);
+            for (int i = 0; i < FTProject.getInstance().FirList.size(); i++) {
+                bw.write(FTProject.getInstance().FirList.get(i).getFirNumber() + ",");
+                bw.write(FTProject.getInstance().FirList.get(i).getCName() + ",");                
+                bw.write(FTProject.getInstance().FirList.get(i).getCFatherName() + ",");
+                bw.write(FTProject.getInstance().FirList.get(i).getCNumber()+ ",");
+                bw.write(FTProject.getInstance().FirList.get(i).getAddress() + ",");
+                bw.write(FTProject.getInstance().FirList.get(i).getDistrictOfIncident() + ",");
+                bw.write(FTProject.getInstance().FirList.get(i).getPoliceStation() + ",");
+                bw.write(FTProject.getInstance().FirList.get(i).getSHOname() + ",");
+                bw.write(FTProject.getInstance().FirList.get(i).getPlaceOfIncident() + ",");
+                bw.write(FTProject.getInstance().FirList.get(i).getDetailsofIncident() + ",");
+                bw.write(FTProject.getInstance().FirList.get(i).getDateOfIncident()+ "\n");
+                }
+            bw.flush();
+            bw.close();
+            fw.close();
+        }
+        catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "FIR File Not Found");
+        }
+    }
+     // read Data from FIR file
+     public static void readDataFIR()
+     {
+         try {
+              FileReader fr = new FileReader("FIR.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String line = br.readLine();
+            while (line != null) {
+                String[] token = line.split(",");
+                FIR f = new FIR();
+                f.setFFirNumber(token[0]);
+                f.setName(token[1]);
+                f.setFName(token[2]);
+                f.setContact(token[3]);
+                f.setAddress(token[4]);
+                f.setDistrictOfIncident(token[5]);            
+                f.setPoliceStation(token[6]);
+                f.setSHOName(token[7]);
+                f.setPOfIncident(token[8]);
+                f.setDetailsofIncident(token[9]);
+                f.setDateOfIncident(token[10]);
+                
+
+                FTProject.getInstance().FirList.add(f);
+                line = br.readLine();
+
+            }
+            br.close();
+            fr.close();
+         }
+          catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "FIR File Not Found");
+        }
+     }
     /**
      * @param args the command line arguments
      */
@@ -404,6 +465,7 @@ public class FTProject {
         readDataSickPrisoners();
         readDataPrisoners();
         readDataJailors();
+        readDataFIR();
         Entrance start = new Entrance();
         start.setVisible(true);
 

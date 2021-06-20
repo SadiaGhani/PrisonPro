@@ -7,6 +7,7 @@ package ftproject;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -52,7 +53,8 @@ public class SPVIEWFORM extends javax.swing.JFrame {
             buffer.close();
         } 
         catch (Exception e) {
-            System.out.println("File Not Found");
+           // System.out.println("File Not Found");
+            JOptionPane.showMessageDialog(null, "Sick Prisoners File Not Found");
         }
 
     }

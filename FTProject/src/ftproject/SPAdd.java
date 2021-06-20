@@ -211,7 +211,7 @@ SickPrisoners s = new SickPrisoners();
         boolean f3 = s.setDName(s4);
         boolean f4 = s.setDisease(s5);
         s.setDID();
-        s.Gender = s2;
+        s.setGender(s2);
         
         if( f1 == true && f2 == true && f3 == true && f4 == true )
         {

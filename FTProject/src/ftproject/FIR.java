@@ -22,7 +22,17 @@ public class FIR {
     private String PlaceOfIncident;
     private String DistrictOfIncident;
     private String DetailsofIncident;
-    public String DateOfIncident;
+    private String DateOfIncident;
+
+    public String getDateOfIncident() {
+        return DateOfIncident;
+    }
+
+    public void setDateOfIncident(String DateOfIncident) {
+        this.DateOfIncident = DateOfIncident;
+    }
+    
+    
     
     public String  GenerateFirNumber()
     {
@@ -43,6 +53,12 @@ public class FIR {
     public void setFirNumber()
     {
         String id = GenerateFirNumber();
+        this.FirNumber = id;
+        
+    }
+     public void setFFirNumber(String id)
+    {
+        
         this.FirNumber = id;
         
     }

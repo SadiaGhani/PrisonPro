@@ -38,6 +38,7 @@ public class ViewRecords extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,7 +60,7 @@ public class ViewRecords extends javax.swing.JFrame {
         jButton1.setBounds(220, 149, 210, 40);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton4.setText("Work Activity Files");
+        jButton4.setText("Work Activity File");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -79,14 +80,14 @@ public class ViewRecords extends javax.swing.JFrame {
         jButton5.setBounds(220, 300, 210, 31);
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton6.setText("Sick Prisoner's Files");
+        jButton6.setText("Sick Prisoner's File");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(220, 450, 210, 31);
+        jButton6.setBounds(170, 510, 320, 40);
 
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton7.setText("Guard's File");
@@ -138,6 +139,16 @@ public class ViewRecords extends javax.swing.JFrame {
         jLabel1.setText("Prisoners Record Files");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(130, 50, 410, 44);
+
+        jButton9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton9.setText("Visitor's File");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton9);
+        jButton9.setBounds(220, 450, 210, 29);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/DataCentre.jpg"))); // NOI18N
         jLabel2.setText("Jailor's Files");
@@ -216,6 +227,15 @@ public class ViewRecords extends javax.swing.JFrame {
         vv.addDataToRow();
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        VViewForm vf = new VViewForm();
+        this.setVisible(false);
+        vf.setVisible(true);
+        vf.addDataToRow();
+        
+    }//GEN-LAST:event_jButton9ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -260,6 +280,7 @@ public class ViewRecords extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
