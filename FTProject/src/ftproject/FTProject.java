@@ -295,7 +295,7 @@ public class FTProject {
        {
           FileWriter fw = new FileWriter("SickPrisoners.txt");
           BufferedWriter  bw = new BufferedWriter(fw);
-          for(int i=0; i<FTProject.getInstance().SickList.size(); i++)
+          for(int i=0; i<FTProject.getInstance().VList.size(); i++)
           {
               bw.write(FTProject.getInstance().SickList.get(i).getDId() + ",");
               bw.write(FTProject.getInstance().SickList.get(i).p.getPName() + ",");
@@ -313,70 +313,6 @@ public class FTProject {
           JOptionPane.showMessageDialog(null, "File Not Found");  
       }
    }
-   // Read Data prisoners in file
-   public static void readDataPrisoners()
-   {
-       try {
-           FileReader fr = new FileReader("Prisoners.txt");
-       BufferedReader br = new BufferedReader(fr);
-       String line = br.readLine();
-       while(line != null)
-       {
-           String[] token = line.split(",");
-           Prisoners p = new Prisoners();
-           p.setFPId(token[0]);
-           p.setName(token[1]);
-           p.setPAge(Integer.parseInt(token[2]));
-           p.setPGender(token[3]);
-           p.setPAddress(token[4]);
-           p.setPSection(token[5]);
-           p.setRoom(Integer.parseInt(token[6]));
-           p.setCDetails(token[7]);
-           p.setDateIN(token[8]);
-           p.setDateOUT(token[9]);
-           
-           FTProject.getInstance().PriList.add(p);
-           line = br.readLine();
-           
-       }
-       br.close();
-       fr.close();
-       }
-       catch (Exception e)
-      {
-          JOptionPane.showMessageDialog(null, "File Not Found");  
-      }
-       
-   }
-   //Write data Prisoners in File
-   public static void writeDataPrisoners()
-   {
-       try{
-           FileWriter fw = new FileWriter("Prisoners.txt");
-          BufferedWriter  bw = new BufferedWriter(fw);
-          for(int i=0; i<FTProject.getInstance().PriList.size(); i++)
-          {
-              bw.write(FTProject.getInstance().PriList.get(i).getPId() + ",");
-              bw.write(FTProject.getInstance().PriList.get(i).getPName() + ",");
-              bw.write(FTProject.getInstance().PriList.get(i).getPAge()+ ",");
-              bw.write(FTProject.getInstance().PriList.get(i).getPGender() + ",");
-              bw.write(FTProject.getInstance().PriList.get(i).getPAddress()+ ",");
-              bw.write(FTProject.getInstance().PriList.get(i).getPSection()+ ",");
-              bw.write(FTProject.getInstance().PriList.get(i).getPRoom()+ ",");
-              bw.write(FTProject.getInstance().PriList.get(i).getCDetails() + ",");
-              bw.write(FTProject.getInstance().PriList.get(i).getDateIN()+ ",");
-              bw.write(FTProject.getInstance().PriList.get(i).getDateOUT()+ "\n");
-          }
-          bw.flush();
-          bw.close();
-          fw.close();
-       }
-        catch (Exception e)
-      {
-          JOptionPane.showMessageDialog(null, "File Not Found");  
-      }
-       
-   }
     /**
      * @param args the command line arguments
      */
@@ -386,7 +322,6 @@ public class FTProject {
        readVisitorsData();
        readDataGuards();
        readDataSickPrisoners();
-       readDataPrisoners();
       Entrance start = new Entrance();
       start.setVisible(true);
 

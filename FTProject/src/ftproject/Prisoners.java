@@ -15,37 +15,13 @@ public class Prisoners {
     private String PId;
     private String PName;
     private int PAge;
-    private String PGender;
+    public String PGender;
     private String PSection;
     private int PRoom;
     private String PAddress;
     private String CDetails;
-    private String dateIN;
-    private String dateOUT;
-
-    public void setDateIN(String dateIN) {
-        this.dateIN = dateIN;
-    }
-
-    public void setDateOUT(String dateOUT) {
-        this.dateOUT = dateOUT;
-    }
-
-    public String getDateIN() {
-        return dateIN;
-    }
-
-    public String getDateOUT() {
-        return dateOUT;
-    }
-
-    public void setPGender(String PGender) {
-        this.PGender = PGender;
-    }
-
-    public String getPGender() {
-        return PGender;
-    }
+    public String dateIN;
+    public String dateOUT;
     
     
    public String  GeneratePID()
@@ -65,12 +41,6 @@ public class Prisoners {
     public void setPId()
     {
         String id = GeneratePID();
-        this.PId = id;
-        
-    }
-    public void setFPId(String id)
-    {
-        
         this.PId = id;
         
     }
