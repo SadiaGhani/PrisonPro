@@ -52,7 +52,7 @@ public class AMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(420, 330, 260, 31);
+        jButton3.setBounds(420, 310, 260, 40);
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -65,7 +65,7 @@ public class AMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(420, 260, 260, 31);
+        jButton2.setBounds(420, 250, 260, 40);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -78,7 +78,7 @@ public class AMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(420, 180, 260, 31);
+        jButton1.setBounds(420, 180, 260, 40);
 
         jButton5.setBackground(new java.awt.Color(0, 0, 0));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -91,7 +91,7 @@ public class AMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(490, 510, 130, 31);
+        jButton5.setBounds(420, 440, 260, 40);
 
         jButton4.setBackground(new java.awt.Color(0, 0, 0));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -104,17 +104,17 @@ public class AMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(420, 410, 260, 31);
+        jButton4.setBounds(420, 380, 260, 40);
 
-        jLabel1.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Admin Menu");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(330, 70, 280, 48);
+        jLabel1.setBounds(410, 60, 280, 60);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/amenu.jpg"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(1, 0, 790, 590);
+        jLabel2.setBounds(0, 0, 790, 590);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
