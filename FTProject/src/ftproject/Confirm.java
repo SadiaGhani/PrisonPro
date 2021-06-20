@@ -53,7 +53,7 @@ public class Confirm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(220, 250, 120, 31);
+        jButton1.setBounds(250, 250, 120, 31);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("No");
@@ -63,7 +63,7 @@ public class Confirm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(30, 250, 130, 31);
+        jButton2.setBounds(40, 250, 130, 31);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/ars.jpg"))); // NOI18N
         jPanel1.add(jLabel1);
