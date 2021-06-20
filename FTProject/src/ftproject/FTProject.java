@@ -194,9 +194,125 @@ public class FTProject {
           JOptionPane.showMessageDialog(null, "File Not Found");  
       }
    }
+     //read data guards
+   public static void readDataGuards()
+   {
+       try
+       {
+           FileReader fr = new FileReader("Guards.txt");
+          BufferedReader br = new BufferedReader(fr);
+          String line = br.readLine();
+          while(line != null)
+          {
+              String[] token = line.split(",");
+             Guards g = new Guards(token[7]);
+             
+             g.setFGID(token[0]);
+             g.setGName(token[1]);
+             g.setGAge(Integer.parseInt(token[2]));
+             g.setGContact(token[3]);
+             g.setGAddress(token[4]);
+             g.setGTime(token[5]);
+             g.setGDutyHours(Integer.parseInt(token[6]));            
+             FTProject.getInstance().GList.add(g);
+             line = br.readLine();
+              
+          }
+          fr.close();
+          br.close();
+          
+          
+       }
+        catch (Exception e)
+      {
+          JOptionPane.showMessageDialog(null, "Guard's File Not Found");  
+      }
+   }
+     // write data guards
+   public static void writeDataGuards()
+   {
+       try
+       {
+          FileWriter fw = new FileWriter("Guards.txt");
+          BufferedWriter  bw = new BufferedWriter(fw);
+          for(int i=0; i<FTProject.getInstance().GList.size(); i++)
+          {
+              bw.write(FTProject.getInstance().GList.get(i).getGID()+ ",");
+              bw.write(FTProject.getInstance().GList.get(i).getGName() + ",");
+              bw.write(FTProject.getInstance().GList.get(i).getGAge() + ",");
+              bw.write(FTProject.getInstance().GList.get(i).getGContact() + ",");
+              bw.write(FTProject.getInstance().GList.get(i).getGAddress() + ",");
+              bw.write(FTProject.getInstance().GList.get(i).getGTime() + ",");
+              bw.write(FTProject.getInstance().GList.get(i).getGDutyHours() + ",");
+              bw.write(FTProject.getInstance().GList.get(i).getGShift() + "\n");
+
+          }
+          bw.flush();
+          bw.close();
+          fw.close();
+       }
+       catch (Exception e)
+      {
+          JOptionPane.showMessageDialog(null, "File Not Found");  
+      }
+   }
+     // read data of SickPrisoners
+   public static void readDataSickPrisoners()
+   {
+       try
+       {
+       FileReader fr = new FileReader("SickPrisoners.txt");
+       BufferedReader br = new BufferedReader(fr);
+       String line = br.readLine();
+       while(line != null)
+       {
+           String[] token = line.split(",");
+           SickPrisoners sp = new SickPrisoners();
+           sp.setFDID(token[0]);
+           sp.p.setName(token[1]);
+           sp.setGender(token[2]);
+           sp.p.setPSection(token[3]);
+           sp.setDName(token[4]);
+           sp.setDisease(token[5]);
            
-               
-    
+           FTProject.getInstance().SickList.add(sp);
+           line = br.readLine();
+           
+       }
+       br.close();
+       fr.close();
+       }
+         catch (Exception e)
+      {
+          JOptionPane.showMessageDialog(null, "File Not Found");  
+      }     
+       
+   }
+   // write data of Sick Prisoners in file
+   public static void writeDataSickPrisoners()
+   {
+       try
+       {
+          FileWriter fw = new FileWriter("SickPrisoners.txt");
+          BufferedWriter  bw = new BufferedWriter(fw);
+          for(int i=0; i<FTProject.getInstance().VList.size(); i++)
+          {
+              bw.write(FTProject.getInstance().SickList.get(i).getDId() + ",");
+              bw.write(FTProject.getInstance().SickList.get(i).p.getPName() + ",");
+              bw.write(FTProject.getInstance().SickList.get(i).getGender() + ",");
+              bw.write(FTProject.getInstance().SickList.get(i).p.getPSection() + ",");
+              bw.write(FTProject.getInstance().SickList.get(i).getDName()+ ",");
+              bw.write(FTProject.getInstance().SickList.get(i).getDisease()+ "\n");
+          }
+          bw.flush();
+          bw.close();
+          fw.close();
+       }
+       catch (Exception e)
+      {
+          JOptionPane.showMessageDialog(null, "File Not Found");  
+      }
+   }
     /**
      * @param args the command line arguments
      */
@@ -204,7 +320,8 @@ public class FTProject {
     public static void main(String[] args) {  
        readDataDoctors();
        readVisitorsData();
-      
+       readDataGuards();
+       readDataSickPrisoners();
       Entrance start = new Entrance();
       start.setVisible(true);
 

@@ -40,6 +40,12 @@ public class SickPrisoners extends Doctors{
         this.SPId = id;
         
     }
+    public void setFDID(String id)
+    {
+        
+        this.SPId = id;
+        
+    }
 
     @Override
     public String getDId() {

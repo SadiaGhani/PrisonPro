@@ -82,12 +82,19 @@ public class Guards {
 
     public boolean setGShift(String GShift) {
         boolean f = false;
-        if (GShift == "night" || GShift == "day") {
+        if (GShift == "Night" || GShift == "Day") {
             f = true;
             this.GShift = GShift;
         }
         return f;
     }
+     public Guards(){
+         
+     }
+     public Guards(String GShift)
+     {
+         this.GShift = GShift; 
+     }
 
     public int getGDutyHours() {
         return GDutyHours;
@@ -131,8 +138,27 @@ public class Guards {
         return GTime;
     }
 
-    public void setGTime(String GTime) {
-        this.GTime = GTime;
+    public boolean setGTime(String GTime) {
+        
+       boolean flag = false;
+       int size = GTime.length();
+       for(int i=0; i< size; i++)
+       {
+           if ((GTime.charAt(i) >= 'a' && GTime.charAt(i) <= 'z') || (GTime.charAt(i) >= 'A' && GTime.charAt(i) <= 'Z') ||(GTime.charAt(i) >= '0' && GTime.charAt(i) <= '9')|| GTime.charAt(i) == ' ') 
+           {
+               flag = true;
+           }
+           else
+           {
+               flag = false;
+               break;
+           }
+       }
+       if(flag == true)
+       {
+           this.GTime = GTime;
+       }
+       return flag;
     }
 
   //id work
@@ -153,6 +179,12 @@ public class Guards {
     public void setGID()
     {
         String id = GenerateGID();
+        this.GID = id;
+        
+    }
+     public void setFGID(String id)
+    {
+       
         this.GID = id;
         
     }

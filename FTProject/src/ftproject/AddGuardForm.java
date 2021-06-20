@@ -262,7 +262,7 @@ public class AddGuardForm extends javax.swing.JFrame {
          
         
        Guards g = new Guards();
-       ArrayList<Guards> gd = FTProject.GList;
+      // ArrayList<Guards> gd = FTProject.GList;
         String g1 = gname.getText();
         int g2 = Integer.parseInt(gage.getText());
         String g3 = gnum.getText();
@@ -282,41 +282,23 @@ public class AddGuardForm extends javax.swing.JFrame {
         b2 = g.setGAge(g2);
         b3 = g.setGContact(g3);
         b4 = g.setGAddress(g4);
-        b5 = g.setGName(g5);
+        b5 = g.setGTime(g5);
         b6 = g.setGDutyHours(g7);
-        
+        g.setGShift(g6);
         if(b1==true&&b2==true&&b3==true&&b4==true&&b5==true&&b6==true)
         {         g.setGID();
-                  gd.add(g);
-                 FTProject.GList = gd;
-                 try{
-                 FileWriter fw = new FileWriter("Guards.txt",true);
-                     fw.write(g.getGID()+",");
-                     fw.write(g1+",");
-                     fw.write(g2+",");
-                     fw.write(g3+",");
-                     fw.write(g4+",");
-                     fw.write(g5+",");
-                     fw.write(g7+",");
-                     fw.write(g6);
-                    
-                     fw.write(System.getProperty("line.separator"));
-                     fw.close();
-                     JOptionPane.showMessageDialog(null, " Your guard is added successfully on the ID "+"\n"+g.getGID());
-                       
                  
-                 }
-                 catch(Exception ex)
-                 {
-                     JOptionPane.showMessageDialog(null, " data is not added in file");
-                 }
+                 FTProject.getInstance().getGList().add(g);
+                
+                FTProject.getInstance().writeDataGuards();
+                 JOptionPane.showMessageDialog(null, " Your guard is added successfully on the ID "+"\n"+g.getGID());
 
             
         }
         
         else
         {
-            System.out.println("invalid data entry!!");
+            System.out.println("Invalid data entry!!");
         }  
 
       

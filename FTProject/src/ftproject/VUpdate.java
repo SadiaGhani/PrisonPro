@@ -242,7 +242,7 @@ public class VUpdate extends javax.swing.JFrame {
             {
                 FTProject.getInstance().getVList().get(index).setVRelation(x3);
             }
-         //   FTProject.getInstance().getVList().set(ind)
+     
             
             FTProject.getInstance().writeDataVisitors();
             addData();

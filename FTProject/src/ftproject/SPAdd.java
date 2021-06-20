@@ -220,25 +220,10 @@ SickPrisoners s = new SickPrisoners();
         {
             //sick.add(s);
             FTProject.getInstance().getSickList().add(s);
-               try{
-                 FileWriter fw = new FileWriter("SickPrisoners.txt",true);
-                     fw.write(s.getDId()+",");
-                     fw.write(s1+",");
-                     fw.write(s2+",");
-                     fw.write(s3+",");
-                     fw.write(s4+",");
-                     fw.write(s5);
-                     
-                     fw.write(System.getProperty("line.separator"));
-                     fw.close();
-                     JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+s.getDId());
+             
+              FTProject.getInstance().writeDataSickPrisoners();
+              JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+s.getDId());
                        
-                 
-                 }
-                 catch(Exception ex)
-                 {
-                     JOptionPane.showMessageDialog(null, " data is not added in file");
-                 }
         }
         else
         {
