@@ -73,7 +73,6 @@ public class FAdd extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel1.setForeground(java.awt.Color.white);
         jLabel1.setText("Write FIR");
-        jLabel1.setBorder(new org.jdesktop.swingx.border.IconBorder());
 
         jLabel2.setForeground(java.awt.Color.white);
         jLabel2.setText("Claimer's Name");
@@ -199,15 +198,17 @@ public class FAdd extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(38, 38, 38))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(433, 433, 433)
                 .addComponent(jLabel1)
@@ -268,12 +269,11 @@ public class FAdd extends javax.swing.JFrame {
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -322,7 +322,7 @@ public class FAdd extends javax.swing.JFrame {
              SimpleDateFormat Date = new SimpleDateFormat("dd/MM/yyyy");
              String f10 = Date.format(dateI.getDate());
              
-             boolean t1 = f.setFName(f1);
+             boolean t1 = f.setName(f1);
              boolean t2 = f.setFName(f2);
              boolean t3 = f.setContact(f3);
              boolean t4 = f.setAddress(f4);
@@ -331,15 +331,28 @@ public class FAdd extends javax.swing.JFrame {
              boolean t7 = f.setPOfIncident(f7);
              boolean t8 = f.setDistrictOfIncident(f8);
              boolean t9 = f.setDetailsofIncident(f9);
-             f.DateOfIncident = f10;
+             System.out.println(t1);
+             System.out.println(t2);
+             System.out.println(t3);
+             System.out.println(t4);
+             System.out.println(t5);
+             System.out.println(t6);
+             System.out.println(t7);
+             System.out.println(t8);
+             System.out.println(t9);
+             System.out.println(t1);
+             
+            
+             f.setDateOfIncident(f10);
              f.setFirNumber();
+              // System.out.println(f.setFirNumber()+"");
              
              if(t1 == true && t2 == true && t3 == true && t4 == true && t5 ==true && t6 == true && t7 == true && t8 == true && t9 ==true )
              {
                  
                  FTProject.getInstance().getFirList().add(f);
                   
-                 try{
+               /*  try{
                  FileWriter fw = new FileWriter("FIR.txt",true);
                      fw.write(f.getFirNumber()+",");
                      fw.write(f1+",");
@@ -361,7 +374,10 @@ public class FAdd extends javax.swing.JFrame {
                  catch(Exception e)
                  {
                      JOptionPane.showMessageDialog(null, "File not Found!");
-                 }
+                 }*/
+               FTProject.getInstance().writeDataFIR();
+               JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+f.getFirNumber());
+                 
                   
              }
              else
