@@ -331,16 +331,7 @@ public class FAdd extends javax.swing.JFrame {
              boolean t7 = f.setPOfIncident(f7);
              boolean t8 = f.setDistrictOfIncident(f8);
              boolean t9 = f.setDetailsofIncident(f9);
-             System.out.println(t1);
-             System.out.println(t2);
-             System.out.println(t3);
-             System.out.println(t4);
-             System.out.println(t5);
-             System.out.println(t6);
-             System.out.println(t7);
-             System.out.println(t8);
-             System.out.println(t9);
-             System.out.println(t1);
+             
              
             
              f.setDateOfIncident(f10);
@@ -352,29 +343,7 @@ public class FAdd extends javax.swing.JFrame {
                  
                  FTProject.getInstance().getFirList().add(f);
                   
-               /*  try{
-                 FileWriter fw = new FileWriter("FIR.txt",true);
-                     fw.write(f.getFirNumber()+",");
-                     fw.write(f1+",");
-                     fw.write(f2+",");
-                     fw.write(f3+",");  
-                     fw.write(f4+",");
-                     fw.write(f8+",");  
-                     fw.write(f5+",");                                                          
-                     fw.write(f6+",");
-                     fw.write(f7+",");
-                     fw.write(f9+",");
-                     fw.write(f10);  
-                     
-                     fw.write(System.getProperty("line.separator"));
-                     fw.close();
-                     JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+f.getFirNumber());
-                 
-                 }
-                 catch(Exception e)
-                 {
-                     JOptionPane.showMessageDialog(null, "File not Found!");
-                 }*/
+               
                FTProject.getInstance().writeDataFIR();
                JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+f.getFirNumber());
                  
