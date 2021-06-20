@@ -57,98 +57,122 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(220, 149, 210, 40);
+        jButton1.setBounds(130, 159, 400, 30);
 
+        jButton4.setBackground(java.awt.Color.blue);
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton4.setForeground(java.awt.Color.white);
         jButton4.setText("Work Activity File");
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(220, 350, 210, 31);
+        jButton4.setBounds(130, 350, 400, 27);
 
+        jButton5.setBackground(java.awt.Color.blue);
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton5.setForeground(java.awt.Color.white);
         jButton5.setText("Doctor's File");
+        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(220, 300, 210, 31);
+        jButton5.setBounds(130, 300, 400, 27);
 
+        jButton6.setBackground(java.awt.Color.blue);
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton6.setForeground(java.awt.Color.white);
         jButton6.setText("Sick Prisoner's File");
+        jButton6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(170, 510, 320, 40);
+        jButton6.setBounds(130, 490, 400, 30);
 
+        jButton7.setBackground(java.awt.Color.blue);
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton7.setForeground(java.awt.Color.white);
         jButton7.setText("Guard's File");
+        jButton7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton7);
-        jButton7.setBounds(220, 400, 210, 31);
+        jButton7.setBounds(130, 400, 400, 27);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setText("This Record is Read Only");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(140, 110, 300, 29);
+        jLabel3.setBounds(180, 100, 300, 29);
 
+        jButton8.setBackground(java.awt.Color.red);
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton8.setForeground(java.awt.Color.white);
         jButton8.setText("BACK");
+        jButton8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton8);
-        jButton8.setBounds(270, 580, 93, 29);
+        jButton8.setBounds(130, 540, 400, 29);
 
+        jButton3.setBackground(java.awt.Color.blue);
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setForeground(java.awt.Color.white);
         jButton3.setText("Prisoner's File");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(220, 250, 210, 31);
+        jButton3.setBounds(130, 250, 400, 27);
 
+        jButton2.setBackground(java.awt.Color.blue);
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setForeground(java.awt.Color.white);
         jButton2.setText("FIR's File");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(220, 200, 210, 31);
+        jButton2.setBounds(130, 200, 400, 27);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Prisoners Record Files");
+        jLabel1.setText("All Record Files");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(130, 50, 410, 44);
+        jLabel1.setBounds(220, 50, 410, 44);
 
+        jButton9.setBackground(java.awt.Color.blue);
         jButton9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton9.setForeground(java.awt.Color.white);
         jButton9.setText("Visitor's File");
+        jButton9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton9);
-        jButton9.setBounds(220, 450, 210, 29);
+        jButton9.setBounds(130, 450, 400, 29);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/DataCentre.jpg"))); // NOI18N
         jLabel2.setText("Jailor's Files");

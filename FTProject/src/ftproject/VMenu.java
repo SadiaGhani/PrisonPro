@@ -42,9 +42,8 @@ public class VMenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jButton1.setBackground(java.awt.Color.yellow);
+        jButton1.setBackground(new java.awt.Color(255, 204, 0));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setForeground(java.awt.Color.white);
         jButton1.setText("ADD VISITOR");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -55,25 +54,29 @@ public class VMenu extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(240, 85, 160, 40);
 
+        jButton2.setBackground(new java.awt.Color(255, 204, 0));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setText("DELETE VISITOR");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(240, 150, 160, 25);
+        jButton2.setBounds(240, 150, 160, 40);
 
+        jButton4.setBackground(new java.awt.Color(253, 204, 0));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setText("SEARCH VISITOR");
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(240, 260, 160, 25);
+        jButton4.setBounds(240, 260, 160, 40);
 
         jButton5.setBackground(java.awt.Color.red);
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -86,17 +89,19 @@ public class VMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(240, 295, 160, 40);
+        jButton5.setBounds(240, 310, 160, 40);
 
+        jButton3.setBackground(new java.awt.Color(253, 204, 0));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setText("UPDATE VISITOR");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(237, 210, 160, 25);
+        jButton3.setBounds(240, 210, 160, 40);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("VISITOR'S MENU");

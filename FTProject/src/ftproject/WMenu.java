@@ -40,50 +40,63 @@ public class WMenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
+        jButton2.setBackground(java.awt.Color.darkGray);
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setForeground(java.awt.Color.white);
         jButton2.setText("FEEDBACK");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(170, 150, 240, 31);
+        jButton2.setBounds(120, 160, 240, 29);
 
+        jButton3.setBackground(java.awt.Color.darkGray);
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setForeground(java.awt.Color.white);
         jButton3.setText("WORK ACTIVITY");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(170, 200, 240, 31);
+        jButton3.setBounds(120, 210, 240, 29);
 
+        jButton4.setBackground(java.awt.Color.darkGray);
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton4.setForeground(java.awt.Color.white);
         jButton4.setText("BACK");
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(170, 250, 240, 31);
+        jButton4.setBounds(120, 260, 240, 29);
 
+        jButton1.setBackground(java.awt.Color.darkGray);
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setForeground(java.awt.Color.white);
         jButton1.setText("ADD WORK");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(170, 100, 240, 31);
+        jButton1.setBounds(120, 110, 240, 31);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jLabel2.setForeground(java.awt.Color.white);
         jLabel2.setText("Work Activity ");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(170, 20, 280, 44);
+        jLabel2.setBounds(140, 40, 280, 44);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/work.jpg"))); // NOI18N
         jPanel1.add(jLabel1);
@@ -93,7 +106,7 @@ public class WMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

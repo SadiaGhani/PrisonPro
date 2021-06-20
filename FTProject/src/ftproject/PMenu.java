@@ -47,11 +47,11 @@ public class PMenu extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(120, 50, 330, 48);
 
-        jButton1.setBackground(java.awt.Color.blue);
+        jButton1.setBackground(java.awt.Color.black);
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton1.setForeground(java.awt.Color.white);
         jButton1.setText("Add Prisoner");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 2));
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0), 2));
         jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,8 +61,11 @@ public class PMenu extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(120, 140, 260, 50);
 
+        jButton4.setBackground(java.awt.Color.black);
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton4.setForeground(java.awt.Color.white);
         jButton4.setText("Delete Prisoner");
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0), 2));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -71,8 +74,11 @@ public class PMenu extends javax.swing.JFrame {
         jPanel1.add(jButton4);
         jButton4.setBounds(120, 340, 260, 50);
 
+        jButton5.setBackground(java.awt.Color.black);
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton5.setForeground(java.awt.Color.white);
         jButton5.setText("Back");
+        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0), 2));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -81,8 +87,11 @@ public class PMenu extends javax.swing.JFrame {
         jPanel1.add(jButton5);
         jButton5.setBounds(120, 410, 260, 50);
 
+        jButton3.setBackground(java.awt.Color.black);
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton3.setForeground(java.awt.Color.white);
         jButton3.setText("Search Prisoner");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0), 2));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -91,8 +100,11 @@ public class PMenu extends javax.swing.JFrame {
         jPanel1.add(jButton3);
         jButton3.setBounds(120, 270, 260, 50);
 
+        jButton2.setBackground(java.awt.Color.black);
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton2.setForeground(java.awt.Color.white);
         jButton2.setText("Update Prisoner");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0), 2));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -101,7 +113,9 @@ public class PMenu extends javax.swing.JFrame {
         jPanel1.add(jButton2);
         jButton2.setBounds(120, 210, 260, 50);
 
+        jLabel2.setBackground(java.awt.Color.black);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/g.jpg"))); // NOI18N
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0), 2));
         jPanel1.add(jLabel2);
         jLabel2.setBounds(1, 0, 520, 540);
 

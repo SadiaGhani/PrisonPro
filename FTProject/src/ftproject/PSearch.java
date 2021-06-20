@@ -100,23 +100,28 @@ public class PSearch extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Search Prisoner");
 
+        jPanel3.setBackground(java.awt.Color.darkGray);
         jPanel3.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.white);
         jLabel1.setText("Search Prisoner's Record");
         jPanel3.add(jLabel1);
-        jLabel1.setBounds(80, 20, 500, 44);
+        jLabel1.setBounds(140, 20, 500, 44);
         jPanel3.add(input);
-        input.setBounds(286, 90, 170, 26);
+        input.setBounds(290, 80, 170, 30);
 
+        jButton1.setBackground(java.awt.Color.blue);
+        jButton1.setForeground(java.awt.Color.white);
         jButton1.setText("Search");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel3.add(jButton1);
-        jButton1.setBounds(490, 90, 79, 29);
+        jButton1.setBounds(470, 80, 120, 30);
 
         pstable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -131,19 +136,23 @@ public class PSearch extends javax.swing.JFrame {
         jPanel3.add(jScrollPane1);
         jScrollPane1.setBounds(20, 150, 570, 180);
 
+        jButton2.setBackground(java.awt.Color.red);
+        jButton2.setForeground(java.awt.Color.white);
         jButton2.setText("Back");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel3.add(jButton2);
-        jButton2.setBounds(530, 340, 65, 29);
+        jButton2.setBounds(440, 340, 150, 30);
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel12.setForeground(java.awt.Color.white);
         jLabel12.setText("Enter ID to Search");
         jPanel3.add(jLabel12);
-        jLabel12.setBounds(140, 90, 140, 17);
+        jLabel12.setBounds(120, 90, 160, 17);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
