@@ -338,7 +338,61 @@ public class FTProject {
         }
 
     }
+// read data of jailors from file
+    public static void readDataJailors()
+    {
+        try {
+            FileReader fr = new FileReader("Jailors.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String line = br.readLine();
+            while (line != null) {
+                String[] token = line.split(",");
+                Jailors j = new Jailors();
+                j.setFJId(token[0]);
+                j.setJName(token[1]);
+                j.setJAge(Integer.parseInt(token[2]));
+                j.setJGender(token[3]);
+                j.setJContact(token[4]);
+                j.setJAddress(token[5]);            
+                j.setJUserName(token[6]);
+                j.setJPassword(token[7]);
 
+                FTProject.getInstance().JaiList.add(j);
+                line = br.readLine();
+
+            }
+            br.close();
+            fr.close();
+        }
+        catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Jailor's File Not Found");
+        }
+    }
+    // write data of jailors in file
+    public static void writeDataJailors()
+    {
+        try
+        {
+             FileWriter fw = new FileWriter("Jailors.txt");
+            BufferedWriter bw = new BufferedWriter(fw);
+            for (int i = 0; i < FTProject.getInstance().JaiList.size(); i++) {
+                bw.write(FTProject.getInstance().JaiList.get(i).getJId() + ",");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJName() + ",");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJAge() + ",");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJGender() + ",");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJContact() + ",");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJAddress() + ",");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJUserName() + ",");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJPassword() + "\n");
+                }
+            bw.flush();
+            bw.close();
+            fw.close();
+        }
+        catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Jailor's File Not Found");
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -349,6 +403,7 @@ public class FTProject {
         readDataGuards();
         readDataSickPrisoners();
         readDataPrisoners();
+        readDataJailors();
         Entrance start = new Entrance();
         start.setVisible(true);
 

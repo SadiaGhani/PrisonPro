@@ -35,6 +35,7 @@ public class ALogin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        box = new javax.swing.JCheckBox();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -44,7 +45,7 @@ public class ALogin extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
         jPanel1.add(AUname);
-        AUname.setBounds(190, 120, 200, 20);
+        AUname.setBounds(190, 120, 210, 26);
 
         APass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +53,7 @@ public class ALogin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(APass);
-        APass.setBounds(190, 180, 200, 20);
+        APass.setBounds(190, 180, 210, 26);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Username");
@@ -67,12 +68,21 @@ public class ALogin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(100, 250, 110, 31);
+        jButton1.setBounds(110, 270, 110, 31);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Password");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(70, 180, 100, 22);
+
+        box.setText("Show Password");
+        box.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boxActionPerformed(evt);
+            }
+        });
+        jPanel1.add(box);
+        box.setBounds(190, 220, 160, 29);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("Login");
@@ -82,7 +92,7 @@ public class ALogin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(300, 250, 110, 31);
+        jButton2.setBounds(270, 270, 110, 31);
 
         jLabel1.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
         jLabel1.setText("Login");
@@ -137,6 +147,18 @@ public class ALogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_APassActionPerformed
 
+    private void boxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxActionPerformed
+        // TODO add your handling code here:
+        if(box.isSelected())
+        {
+            APass.setEchoChar((char)0);
+        }
+        else
+        {
+            APass.setEchoChar('*');
+        }
+    }//GEN-LAST:event_boxActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -175,6 +197,7 @@ public class ALogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField APass;
     private javax.swing.JTextField AUname;
+    private javax.swing.JCheckBox box;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;

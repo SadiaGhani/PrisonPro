@@ -17,8 +17,16 @@ public class Jailors extends Details {
     private String JAddress;
     private String JUserName;
     private String JPassword;
-    public String JGender;
+    private String JGender;
     //setters and getters
+
+    public String getJGender() {
+        return JGender;
+    }
+
+    public void setJGender(String JGender) {
+        this.JGender = JGender;
+    }
     
     public String  GeneratePID()
     {
@@ -37,6 +45,12 @@ public class Jailors extends Details {
     public void setJId()
     {
         String id = GeneratePID();
+        this.JId = id;
+        
+    }
+     public void setFJId(String id)
+    {
+        
         this.JId = id;
         
     }
