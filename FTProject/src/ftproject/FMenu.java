@@ -47,49 +47,53 @@ public class FMenu extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("SEARCH FIR");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.red, 2));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(90, 230, 150, 31);
+        jButton3.setBounds(60, 220, 180, 40);
 
         jButton2.setBackground(java.awt.Color.blue);
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("DELETE FIR");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.red, 2));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(90, 170, 150, 31);
+        jButton2.setBounds(60, 160, 180, 40);
 
         jButton4.setBackground(java.awt.Color.blue);
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("BACK");
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.red, 2));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(90, 300, 150, 31);
+        jButton4.setBounds(60, 280, 180, 40);
 
         jButton1.setBackground(java.awt.Color.blue);
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("WRITE FIR");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.red, 2));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(90, 110, 150, 31);
+        jButton1.setBounds(60, 100, 180, 40);
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N

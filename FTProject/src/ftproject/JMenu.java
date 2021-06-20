@@ -59,7 +59,7 @@ public class JMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(120, 230, 160, 37);
+        jButton2.setBounds(60, 230, 230, 37);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton1.setText("FIR");
@@ -69,7 +69,7 @@ public class JMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(120, 140, 160, 37);
+        jButton1.setBounds(60, 140, 230, 37);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton3.setText("Doctors");
@@ -79,7 +79,7 @@ public class JMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(120, 320, 160, 37);
+        jButton3.setBounds(60, 320, 230, 37);
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton6.setText("Work Activity");
@@ -135,7 +135,7 @@ public class JMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton9);
-        jButton9.setBounds(260, 497, 210, 50);
+        jButton9.setBounds(240, 490, 210, 50);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton4.setText("Visitors");
@@ -145,7 +145,7 @@ public class JMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(120, 400, 160, 40);
+        jButton4.setBounds(60, 400, 230, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/image.jpg"))); // NOI18N
         jPanel1.add(jLabel1);

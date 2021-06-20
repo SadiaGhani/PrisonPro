@@ -42,15 +42,18 @@ public class VMenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
+        jButton1.setBackground(java.awt.Color.yellow);
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setForeground(java.awt.Color.white);
         jButton1.setText("ADD VISITOR");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(240, 100, 160, 25);
+        jButton1.setBounds(240, 85, 160, 40);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setText("DELETE VISITOR");
@@ -72,15 +75,18 @@ public class VMenu extends javax.swing.JFrame {
         jPanel1.add(jButton4);
         jButton4.setBounds(240, 260, 160, 25);
 
+        jButton5.setBackground(java.awt.Color.red);
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton5.setForeground(java.awt.Color.white);
         jButton5.setText("BACK");
+        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(240, 310, 160, 25);
+        jButton5.setBounds(240, 295, 160, 40);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setText("UPDATE VISITOR");

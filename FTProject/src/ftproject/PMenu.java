@@ -41,21 +41,25 @@ public class PMenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("PrisonER's Menu");
+        jLabel1.setText("Prisoner's Menu");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(100, 40, 330, 48);
+        jLabel1.setBounds(120, 50, 330, 48);
 
+        jButton1.setBackground(java.awt.Color.blue);
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton1.setForeground(java.awt.Color.white);
         jButton1.setText("Add Prisoner");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 2));
+        jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(20, 150, 260, 37);
+        jButton1.setBounds(120, 140, 260, 50);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton4.setText("Delete Prisoner");
@@ -65,7 +69,7 @@ public class PMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(220, 340, 260, 37);
+        jButton4.setBounds(120, 340, 260, 50);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton5.setText("Back");
@@ -75,7 +79,7 @@ public class PMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(20, 400, 250, 37);
+        jButton5.setBounds(120, 410, 260, 50);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton3.setText("Search Prisoner");
@@ -85,7 +89,7 @@ public class PMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(20, 280, 250, 37);
+        jButton3.setBounds(120, 270, 260, 50);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton2.setText("Update Prisoner");
@@ -95,7 +99,7 @@ public class PMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(220, 220, 260, 37);
+        jButton2.setBounds(120, 210, 260, 50);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/g.jpg"))); // NOI18N
         jPanel1.add(jLabel2);
