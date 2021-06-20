@@ -45,7 +45,7 @@ public class ALogin extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
         jPanel1.add(AUname);
-        AUname.setBounds(190, 120, 210, 26);
+        AUname.setBounds(190, 120, 210, 20);
 
         APass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,24 +53,29 @@ public class ALogin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(APass);
-        APass.setBounds(190, 180, 210, 26);
+        APass.setBounds(190, 180, 210, 20);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setForeground(java.awt.Color.blue);
         jLabel3.setText("Username");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(70, 120, 100, 22);
 
+        jButton1.setBackground(java.awt.Color.red);
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setForeground(java.awt.Color.white);
         jButton1.setText("Back");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(110, 270, 110, 31);
+        jButton1.setBounds(100, 280, 110, 27);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(java.awt.Color.blue);
         jLabel4.setText("Password");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(70, 180, 100, 22);
@@ -82,22 +87,26 @@ public class ALogin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(box);
-        box.setBounds(190, 220, 160, 29);
+        box.setBounds(190, 220, 210, 23);
 
+        jButton2.setBackground(java.awt.Color.blue);
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setForeground(java.awt.Color.white);
         jButton2.setText("Login");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(270, 270, 110, 31);
+        jButton2.setBounds(310, 280, 110, 27);
 
-        jLabel1.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.red);
         jLabel1.setText("Login");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(190, 30, 160, 48);
+        jLabel1.setBounds(210, 40, 160, 48);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/ad1.jpg"))); // NOI18N
         jPanel1.add(jLabel2);
