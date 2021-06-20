@@ -55,11 +55,11 @@ public class PAdd extends javax.swing.JFrame {
         paddress = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         cdetails = new javax.swing.JTextArea();
-        Idate = new com.toedter.calendar.JDateChooser();
-        Odate = new com.toedter.calendar.JDateChooser();
         pmale = new javax.swing.JRadioButton();
         pfemale = new javax.swing.JRadioButton();
         psection = new javax.swing.JComboBox<>();
+        Idate = new com.toedter.calendar.JDateChooser();
+        Odate = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Add Prisoner");
@@ -144,7 +144,7 @@ public class PAdd extends javax.swing.JFrame {
                             .addComponent(jLabel10)
                             .addComponent(jLabel11))
                         .addGap(106, 106, 106)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(pname, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(page, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -152,13 +152,13 @@ public class PAdd extends javax.swing.JFrame {
                                     .addComponent(pmale)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(pfemale)))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Idate, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Odate, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(psection, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(proom, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE))))
+                                .addComponent(proom, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE))
+                            .addComponent(Idate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Odate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(160, 160, 160)
                         .addComponent(jLabel1)))
@@ -208,11 +208,14 @@ public class PAdd extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
                     .addComponent(Idate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addComponent(Odate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel11))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Odate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -263,36 +266,20 @@ public class PAdd extends javax.swing.JFrame {
               boolean f4 = p.setPAddress(p5);
               boolean f5 = p.setCDetails(p6);
               boolean f6 = p.setPSection(p9);
-              p.dateIN = p7;
-              p.dateOUT = p8;
-              p.PGender = p3;
+              
+              p.setDateIN(p7);
+              p.setDateOUT(p8);
+              p.setPGender(p3);
               p.setPId();
               if( f1 == true && f2 == true && f3 == true && f4 == true && f5 ==true && f6 == true)
               {
                  
                   FTProject.getInstance().getPriList().add(p);
                   
-                  try{
-                 FileWriter fw = new FileWriter("Prisoners.txt",true);
-                     fw.write(p.getPId()+",");
-                     fw.write(p1+",");
-                     fw.write(p2+",");
-                     fw.write(p3+",");                    
-                     fw.write(p5+",");
-                     fw.write(p9+",");
-                     fw.write(p4+",");                     
-                     fw.write(p6+",");
-                     fw.write(p7+",");
-                     fw.write(p8);                    
-                     fw.write(System.getProperty("line.separator"));
-                     fw.close();
-                     JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+p.getPId());
                  
-                 }
-                 catch(Exception e)
-                 {
-                     JOptionPane.showMessageDialog(null, "File not Found!");
-                 }
+                  FTProject.getInstance().writeDataPrisoners();
+                  JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+p.getPId());
+                 
               }
               else
               {
