@@ -22,7 +22,7 @@ public class Prisoners {
     private String CDetails;
     private String dateIN;
     private String dateOUT;
-
+ // getter & Setter
     public void setDateIN(String dateIN) {
         this.dateIN = dateIN;
     }

@@ -274,9 +274,8 @@ public class PAdd extends javax.swing.JFrame {
               if( f1 == true && f2 == true && f3 == true && f4 == true && f5 ==true && f6 == true)
               {
                  
-                  FTProject.getInstance().getPriList().add(p);
-                  
-                 
+                                 
+                  FTProject.getInstance().getPriList().add(p); 
                   FTProject.getInstance().writeDataPrisoners();
                   JOptionPane.showMessageDialog(null, " Data added successfully on the ID "+"\n"+p.getPId());
                  
