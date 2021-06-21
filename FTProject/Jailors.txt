@@ -1,4 +1,3 @@
-J-966,ali,23,Male,03124567890,pakistan,ali,ali123
-J-894,zain,39,Male,03124567890,Kasur pakistan,zain,zain@123
-J-949,jhon,45,Male,03245678901,miltan pakistan,jhon,jhon123
-J-713,alia,21,Female,03785643291,Pattoki Kasur,alia,alia@123
+J-966//ali//23//Male//03124567890//pakistan//ali//ali123
+J-894//zain//39//Male//03124567890//Kasur pakistan//zain//zain@123
+J-617//Zahid  Rana//45//Male//03334567009//Kasur, Punjab//@zahid//zahid123

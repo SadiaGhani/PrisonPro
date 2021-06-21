@@ -346,7 +346,7 @@ public class FTProject {
             BufferedReader br = new BufferedReader(fr);
             String line = br.readLine();
             while (line != null) {
-                String[] token = line.split(",");
+                String[] token = line.split("//");
                 Jailors j = new Jailors();
                 j.setFJId(token[0]);
                 j.setJName(token[1]);
@@ -376,13 +376,13 @@ public class FTProject {
             FileWriter fw = new FileWriter("Jailors.txt");
             BufferedWriter bw = new BufferedWriter(fw);
             for (int i = 0; i < FTProject.getInstance().JaiList.size(); i++) {
-                bw.write(FTProject.getInstance().JaiList.get(i).getJId() + ",");
-                bw.write(FTProject.getInstance().JaiList.get(i).getJName() + ",");
-                bw.write(FTProject.getInstance().JaiList.get(i).getJAge() + ",");
-                bw.write(FTProject.getInstance().JaiList.get(i).getJGender() + ",");
-                bw.write(FTProject.getInstance().JaiList.get(i).getJContact() + ",");
-                bw.write(FTProject.getInstance().JaiList.get(i).getJAddress() + ",");
-                bw.write(FTProject.getInstance().JaiList.get(i).getJUserName() + ",");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJId() + "//");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJName() + "//");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJAge() + "//");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJGender() + "//");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJContact() + "//");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJAddress() + "//");
+                bw.write(FTProject.getInstance().JaiList.get(i).getJUserName() + "//");
                 bw.write(FTProject.getInstance().JaiList.get(i).getJPassword() + "\n");
                 }
             bw.flush();

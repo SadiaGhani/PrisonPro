@@ -33,7 +33,7 @@ public class Login extends Jailors {
             { 
                 
                 
-                String[] token = line.split(",");
+                String[] token = line.split("//");
                 if (token[6].equals(a) && token[7].equals(b)) 
                 {
                    

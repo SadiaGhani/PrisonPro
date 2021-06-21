@@ -34,7 +34,7 @@ public class JVIEWFORM extends javax.swing.JFrame {
             String line = buffer.readLine();
             while (line != null || line != "") {
 
-                String[] token = line.split(",");
+                String[] token = line.split("//");
 
                 Data[0] = token[0];
                 Data[1] = token[1];
