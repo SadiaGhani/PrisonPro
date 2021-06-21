@@ -1,2 +1,1 @@
-G-926,hamza,30,03456789227,pattoki kasur,9 years,7,Day
-G-716,fateh,49,03457829657,multan,5 years,9,Night
+G-919/Faiz/30/03006789123/Lahore, Pakistan/8 years/12/Night

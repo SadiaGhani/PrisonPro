@@ -36,7 +36,7 @@ public class PVIEWFORM extends javax.swing.JFrame {
                 String line = buffer.readLine();
                 while (line != null ) {
                     
-                    String[] token = line.split(",");
+                    String[] token = line.split("//");
                     
                     Data[0] = token[0];
                     Data[1] = token[1];
@@ -67,7 +67,6 @@ public class PVIEWFORM extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        glossPainter1 = new org.jdesktop.swingx.painter.GlossPainter();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -186,7 +185,6 @@ public class PVIEWFORM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private org.jdesktop.swingx.painter.GlossPainter glossPainter1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

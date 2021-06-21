@@ -39,7 +39,7 @@ public class PSearch extends javax.swing.JFrame {
        while(line != null)
        { 
            
-           String[] token = line.split(",");
+           String[] token = line.split("//");
            if(token[0].equals(id))
            {
                Data[0] = token[0];

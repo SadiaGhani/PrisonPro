@@ -1,2 +1,1 @@
-P-162,Noor ,45,Female,kohat Pakistan,C,300,Murder,01/06/2021,03/06/2022
-P-943,zaid,34,Male,Kasur Pakistan,A,239,Murder,01/06/2021,10/06/2023
+P-536//monir//40//Male//Karachi,Pakistan//A//304//Murder//01/06/2021//03/06/2022
