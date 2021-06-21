@@ -134,9 +134,10 @@ public class PSearch extends javax.swing.JFrame {
         jScrollPane1.setViewportView(pstable);
 
         jPanel3.add(jScrollPane1);
-        jScrollPane1.setBounds(20, 150, 570, 180);
+        jScrollPane1.setBounds(40, 150, 570, 180);
 
         jButton2.setBackground(java.awt.Color.red);
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
         jButton2.setForeground(java.awt.Color.white);
         jButton2.setText("Back");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -146,7 +147,7 @@ public class PSearch extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton2);
-        jButton2.setBounds(440, 340, 150, 30);
+        jButton2.setBounds(210, 340, 260, 40);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel12.setForeground(java.awt.Color.white);
