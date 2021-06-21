@@ -32,7 +32,7 @@ public class FIRVIEWFORM extends javax.swing.JFrame {
        while(line != null)
        { 
            
-           String[] token = line.split(",");           
+           String[] token = line.split("//");           
       
         x += "\n************************************************************************************************\n";
         x += (area.getText()+"**                                                              FIR  Report                                                   **\n");

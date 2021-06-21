@@ -34,7 +34,7 @@ public class FView extends javax.swing.JFrame {
        while(line != null)
        { 
            
-           String[] token = line.split(",");
+           String[] token = line.split("//");
            if(token[0].equals(id))
            {
               area.setText("************************************************************************************************\n");

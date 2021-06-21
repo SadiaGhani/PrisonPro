@@ -1,2 +1,3 @@
-F-69245,Farhan,Khan Ali,03292567889,Karachi Pakistan,Tatha,City Station,Farhat Baig,Bipass,Rubbery,02/06/2021
-F-69245,Farhan,Khan Ali,03292567889,Karachi Pakistan,Tatha,City Station,Farhat Baig,Bipass,Rubbery,02/06/2021
+F-15716//muhammad Bilal//Syed Ali//03007856143//kohat, KPK//Kohat District//City Thana kohat//Fazal Khan//Motorway//Rubbery//01/06/2021
+F-86936//qazi saab//Hameed//03457689113//karachi, Pakistan//Karachi//City police Station//Hamid Mir//Motorway//Ribbery//02/06/2021
+F-85877//Mehmat//Pasha//03123467889//Pattoki, Kasur//Kasur//City Thana//Tahir Mehmood//Bipass//Rubbery//02/06/2021

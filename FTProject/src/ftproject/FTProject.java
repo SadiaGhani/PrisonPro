@@ -400,16 +400,16 @@ public class FTProject {
             FileWriter fw = new FileWriter("FIR.txt");
             BufferedWriter bw = new BufferedWriter(fw);
             for (int i = 0; i < FTProject.getInstance().FirList.size(); i++) {
-                bw.write(FTProject.getInstance().FirList.get(i).getFirNumber() + ",");
-                bw.write(FTProject.getInstance().FirList.get(i).getCName() + ",");                
-                bw.write(FTProject.getInstance().FirList.get(i).getCFatherName() + ",");
-                bw.write(FTProject.getInstance().FirList.get(i).getCNumber()+ ",");
-                bw.write(FTProject.getInstance().FirList.get(i).getAddress() + ",");
-                bw.write(FTProject.getInstance().FirList.get(i).getDistrictOfIncident() + ",");
-                bw.write(FTProject.getInstance().FirList.get(i).getPoliceStation() + ",");
-                bw.write(FTProject.getInstance().FirList.get(i).getSHOname() + ",");
-                bw.write(FTProject.getInstance().FirList.get(i).getPlaceOfIncident() + ",");
-                bw.write(FTProject.getInstance().FirList.get(i).getDetailsofIncident() + ",");
+                bw.write(FTProject.getInstance().FirList.get(i).getFirNumber() + "//");
+                bw.write(FTProject.getInstance().FirList.get(i).getCName() + "//");                
+                bw.write(FTProject.getInstance().FirList.get(i).getCFatherName() + "//");
+                bw.write(FTProject.getInstance().FirList.get(i).getCNumber()+ "//");
+                bw.write(FTProject.getInstance().FirList.get(i).getAddress() + "//");
+                bw.write(FTProject.getInstance().FirList.get(i).getDistrictOfIncident() + "//");
+                bw.write(FTProject.getInstance().FirList.get(i).getPoliceStation() + "//");
+                bw.write(FTProject.getInstance().FirList.get(i).getSHOname() + "//");
+                bw.write(FTProject.getInstance().FirList.get(i).getPlaceOfIncident() + "//");
+                bw.write(FTProject.getInstance().FirList.get(i).getDetailsofIncident() + "//");
                 bw.write(FTProject.getInstance().FirList.get(i).getDateOfIncident()+ "\n");
                 }
             bw.flush();
@@ -428,7 +428,7 @@ public class FTProject {
             BufferedReader br = new BufferedReader(fr);
             String line = br.readLine();
             while (line != null) {
-                String[] token = line.split(",");
+                String[] token = line.split("//");
                 FIR f = new FIR();
                 f.setFFirNumber(token[0]);
                 f.setName(token[1]);

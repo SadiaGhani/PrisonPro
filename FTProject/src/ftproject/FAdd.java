@@ -357,7 +357,7 @@ public class FAdd extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-             f.setFirNumber();
+             //f.setFirNumber();
              String f1 = cname.getText();
              String f2 = cfname.getText();
              String f3 = cnum.getText();
@@ -377,7 +377,7 @@ public class FAdd extends javax.swing.JFrame {
         
        
         
-        area1.setText(area1.getText()+"  FIR Number:  "+f.getFirNumber()+"\n\n");
+        area1.setText(area1.getText()+"  FIR Number:  "+FTProject.getInstance().getFirList().get(FTProject.getInstance().getFirList().size()-1).getFirNumber()+"\n\n");
         area1.setText(area1.getText()+"  Claimer's Name:  "+f1+"\n");
         area1.setText(area1.getText()+"  Clamier's Father Name:    "+f2+"\n");
         area1.setText(area1.getText()+"  Contact Number:      "+f3+"\n");
