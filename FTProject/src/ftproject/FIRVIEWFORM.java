@@ -24,36 +24,34 @@ public class FIRVIEWFORM extends javax.swing.JFrame {
      public void readData()
     {
         try
-     {
-       
-        
+     {       
+        String x = "";
          FileReader read = new FileReader("FIR.txt");
          BufferedReader buffer = new BufferedReader(read);
          String line = buffer.readLine();
        while(line != null)
        { 
            
-           String[] token = line.split(",");
-           
-        area.setText("\n************************************************************************************************\n");
-        area.setText(area.getText()+"**                                                              FIR  Report                                                   **\n");
-        area.setText(area.getText()+"************************************************************************************************\n");        
-        area.setText(area.getText()+"  FIR Number:  "+token[0]+"\n\n");
-        area.setText(area.getText()+"  Claimer's Name:  "+token[1]+"\n");
-        area.setText(area.getText()+"  Clamier's Father Name:    "+token[2]+"\n");
-        area.setText(area.getText()+"  Contact Number:      "+token[3]+"\n");
-        area.setText(area.getText()+"  Address:    "+token[4]+"\n");
-        area.setText(area.getText()+"  District:  "+token[5]+"\n");
-        area.setText(area.getText()+"  Police Station:  "+token[6]+"\n");
-        area.setText(area.getText()+"  SHO Name:  "+token[7]+"\n");
-        area.setText(area.getText()+"  Place of Incident:      "+token[8]+"\n");
-        area.setText(area.getText()+"  Details of Incident:    "+token[9]);
-        area.setText(area.getText()+"\n\n  Date of Incident:  "+token[10]+"\n");
-              
-               
+           String[] token = line.split(",");           
+      
+        x += "\n************************************************************************************************\n";
+        x += (area.getText()+"**                                                              FIR  Report                                                   **\n");
+        x += (area.getText()+"************************************************************************************************\n");        
+        x += (area.getText()+"  FIR Number:  "+token[0]+"\n\n");
+        x += (area.getText()+"  Claimer's Name:  "+token[1]+"\n");
+        x += (area.getText()+"  Clamier's Father Name:    "+token[2]+"\n");
+        x += (area.getText()+"  Contact Number:      "+token[3]+"\n");
+        x += (area.getText()+"  Address:    "+token[4]+"\n");
+        x += (area.getText()+"  District:  "+token[5]+"\n");
+        x += (area.getText()+"  Police Station:  "+token[6]+"\n");
+        x += (area.getText()+"  SHO Name:  "+token[7]+"\n");
+        x += (area.getText()+"  Place of Incident:      "+token[8]+"\n");
+        x += (area.getText()+"  Details of Incident:    "+token[9]);
+        x += (area.getText()+"\n\n  Date of Incident:  "+token[10]+"\n");    
            
         line= buffer.readLine();
        }
+       area.setText(x);
         
            read.close();
            buffer.close();
