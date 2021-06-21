@@ -186,7 +186,7 @@ public class FTProject {
             BufferedReader br = new BufferedReader(fr);
             String line = br.readLine();
             while (line != null) {
-                String[] token = line.split(",");
+                String[] token = line.split("/");
                 Guards g = new Guards(token[7]);
 
                 g.setFGID(token[0]);
@@ -214,13 +214,13 @@ public class FTProject {
             FileWriter fw = new FileWriter("Guards.txt");
             BufferedWriter bw = new BufferedWriter(fw);
             for (int i = 0; i < FTProject.getInstance().GList.size(); i++) {
-                bw.write(FTProject.getInstance().GList.get(i).getGID() + ",");
-                bw.write(FTProject.getInstance().GList.get(i).getGName() + ",");
-                bw.write(FTProject.getInstance().GList.get(i).getGAge() + ",");
-                bw.write(FTProject.getInstance().GList.get(i).getGContact() + ",");
-                bw.write(FTProject.getInstance().GList.get(i).getGAddress() + ",");
-                bw.write(FTProject.getInstance().GList.get(i).getGTime() + ",");
-                bw.write(FTProject.getInstance().GList.get(i).getGDutyHours() + ",");
+                bw.write(FTProject.getInstance().GList.get(i).getGID() + "/");
+                bw.write(FTProject.getInstance().GList.get(i).getGName() + "/");
+                bw.write(FTProject.getInstance().GList.get(i).getGAge() + "/");
+                bw.write(FTProject.getInstance().GList.get(i).getGContact() + "/");
+                bw.write(FTProject.getInstance().GList.get(i).getGAddress() + "/");
+                bw.write(FTProject.getInstance().GList.get(i).getGTime() + "/");
+                bw.write(FTProject.getInstance().GList.get(i).getGDutyHours() + "/");
                 bw.write(FTProject.getInstance().GList.get(i).getGShift() + "\n");
 
             }
@@ -288,7 +288,7 @@ public class FTProject {
             BufferedReader br = new BufferedReader(fr);
             String line = br.readLine();
             while (line != null) {
-                String[] token = line.split(",");
+                String[] token = line.split("//");
                 Prisoners p = new Prisoners();
                 p.setFPId(token[0]);
                 p.setName(token[1]);
@@ -319,15 +319,15 @@ public class FTProject {
             FileWriter fw = new FileWriter("Prisoners.txt");
             BufferedWriter bw = new BufferedWriter(fw);
             for (int i = 0; i < FTProject.getInstance().PriList.size(); i++) {
-                bw.write(FTProject.getInstance().PriList.get(i).getPId() + ",");
-                bw.write(FTProject.getInstance().PriList.get(i).getPName() + ",");
-                bw.write(FTProject.getInstance().PriList.get(i).getPAge() + ",");
-                bw.write(FTProject.getInstance().PriList.get(i).getPGender() + ",");
-                bw.write(FTProject.getInstance().PriList.get(i).getPAddress() + ",");
-                bw.write(FTProject.getInstance().PriList.get(i).getPSection() + ",");
-                bw.write(FTProject.getInstance().PriList.get(i).getPRoom() + ",");
-                bw.write(FTProject.getInstance().PriList.get(i).getCDetails() + ",");
-                bw.write(FTProject.getInstance().PriList.get(i).getDateIN() + ",");
+                bw.write(FTProject.getInstance().PriList.get(i).getPId() + "//");
+                bw.write(FTProject.getInstance().PriList.get(i).getPName() + "//");
+                bw.write(FTProject.getInstance().PriList.get(i).getPAge() + "//");
+                bw.write(FTProject.getInstance().PriList.get(i).getPGender() + "//");
+                bw.write(FTProject.getInstance().PriList.get(i).getPAddress() + "//");
+                bw.write(FTProject.getInstance().PriList.get(i).getPSection() + "//");
+                bw.write(FTProject.getInstance().PriList.get(i).getPRoom() + "//");
+                bw.write(FTProject.getInstance().PriList.get(i).getCDetails() + "//");
+                bw.write(FTProject.getInstance().PriList.get(i).getDateIN() + "//");
                 bw.write(FTProject.getInstance().PriList.get(i).getDateOUT() + "\n");
             }
             bw.flush();
