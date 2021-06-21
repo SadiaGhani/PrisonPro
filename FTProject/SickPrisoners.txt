@@ -1,0 +1,2 @@
+PS-286,Mirza saab,Male,A,Dr Zahid,Fever
+PS-558,Gull Nawaz,Male,B,Dr Shaheen Khan,Malyria
