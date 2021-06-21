@@ -44,22 +44,27 @@ public class ALogin extends javax.swing.JFrame {
         setTitle("Admin Login");
 
         jPanel1.setLayout(null);
-        jPanel1.add(AUname);
-        AUname.setBounds(190, 120, 210, 20);
 
+        AUname.setBackground(new java.awt.Color(204, 204, 204));
+        AUname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(AUname);
+        AUname.setBounds(190, 110, 210, 30);
+
+        APass.setBackground(new java.awt.Color(204, 204, 204));
+        APass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         APass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 APassActionPerformed(evt);
             }
         });
         jPanel1.add(APass);
-        APass.setBounds(190, 180, 210, 20);
+        APass.setBounds(190, 170, 210, 30);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(java.awt.Color.blue);
         jLabel3.setText("Username");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(70, 120, 100, 22);
+        jLabel3.setBounds(70, 112, 100, 30);
 
         jButton1.setBackground(java.awt.Color.red);
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -72,13 +77,13 @@ public class ALogin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(100, 280, 110, 27);
+        jButton1.setBounds(90, 267, 150, 40);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(java.awt.Color.blue);
         jLabel4.setText("Password");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(70, 180, 100, 22);
+        jLabel4.setBounds(70, 172, 100, 30);
 
         box.setText("Show Password");
         box.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +105,7 @@ public class ALogin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(310, 280, 110, 27);
+        jButton2.setBounds(270, 267, 150, 40);
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel1.setForeground(java.awt.Color.red);
