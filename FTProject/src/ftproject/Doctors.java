@@ -42,10 +42,20 @@ public class Doctors {
             if((DName.charAt(i)>='a'&&DName.charAt(i)<='z')||(DName.charAt(i)>='A'&&DName.charAt(i)<='Z')||DName.charAt(i)==' ')
             {
                         
-                this.DName = DName;
+               
                 f = true;
             }
+            else
+                
+            {
+                f = false;
+                break;
+            }
 
+        }
+        if(f == true)
+        {
+             this.DName = DName;
         }
         
         

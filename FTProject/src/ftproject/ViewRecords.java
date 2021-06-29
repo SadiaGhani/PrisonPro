@@ -57,7 +57,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(130, 159, 400, 30);
+        jButton1.setBounds(180, 149, 280, 40);
 
         jButton4.setBackground(java.awt.Color.blue);
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -70,7 +70,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(130, 350, 400, 27);
+        jButton4.setBounds(180, 350, 280, 40);
 
         jButton5.setBackground(java.awt.Color.blue);
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -83,7 +83,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(130, 300, 400, 27);
+        jButton5.setBounds(180, 300, 280, 40);
 
         jButton6.setBackground(java.awt.Color.blue);
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -96,7 +96,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(130, 490, 400, 30);
+        jButton6.setBounds(180, 500, 280, 40);
 
         jButton7.setBackground(java.awt.Color.blue);
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -109,12 +109,12 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton7);
-        jButton7.setBounds(130, 400, 400, 27);
+        jButton7.setBounds(180, 400, 280, 40);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setText("This Record is Read Only");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(180, 100, 300, 29);
+        jLabel3.setBounds(180, 80, 300, 29);
 
         jButton8.setBackground(java.awt.Color.red);
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -127,7 +127,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton8);
-        jButton8.setBounds(130, 540, 400, 29);
+        jButton8.setBounds(180, 550, 280, 40);
 
         jButton3.setBackground(java.awt.Color.blue);
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -140,7 +140,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(130, 250, 400, 27);
+        jButton3.setBounds(180, 250, 280, 40);
 
         jButton2.setBackground(java.awt.Color.blue);
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -153,13 +153,13 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(130, 200, 400, 27);
+        jButton2.setBounds(180, 200, 280, 40);
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("All Record Files");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(220, 50, 410, 44);
+        jLabel1.setBounds(220, 40, 410, 44);
 
         jButton9.setBackground(java.awt.Color.blue);
         jButton9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -172,7 +172,7 @@ public class ViewRecords extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton9);
-        jButton9.setBounds(130, 450, 400, 29);
+        jButton9.setBounds(180, 450, 280, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ftproject/DataCentre.jpg"))); // NOI18N
         jLabel2.setText("Jailor's Files");

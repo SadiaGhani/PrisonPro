@@ -53,8 +53,8 @@ public class SPVIEWFORM extends javax.swing.JFrame {
             buffer.close();
         } 
         catch (Exception e) {
-           // System.out.println("File Not Found");
-            JOptionPane.showMessageDialog(null, "Sick Prisoners File Not Found");
+            System.out.println("File Not Found");
+            //JOptionPane.showMessageDialog(null, "Sick Prisoners File Not Found");
         }
 
     }

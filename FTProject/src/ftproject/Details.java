@@ -27,10 +27,19 @@ public class Details {
             if((JName.charAt(i)>='a'&&JName.charAt(i)<='z')||(JName.charAt(i)>='A'&&JName.charAt(i)<='Z')||JName.charAt(i)==' ')
             {
                         
-                this.JName = JName;
+                
                 f = true;
             }
+            else
+            {
+                f = false;
+                break;
+            }
             
+        }
+        if(f == true)
+        {
+           this.JName = JName; 
         }
      return f;
     }

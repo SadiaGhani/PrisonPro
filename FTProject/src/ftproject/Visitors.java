@@ -66,10 +66,19 @@ public class Visitors {
             if((VName.charAt(i)>='a'&&VName.charAt(i)<='z')||(VName.charAt(i)>='A'&&VName.charAt(i)<='Z')||VName.charAt(i)==' ')
             {
                         
-                this.VName = VName;
+                
                 f = true;
             }
+            else
+            {
+                f = false;
+                break;
+            }
             
+        }
+        if(f == true)
+        {
+            this.VName = VName;
         }
 
 

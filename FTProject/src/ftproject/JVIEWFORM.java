@@ -49,8 +49,8 @@ public class JVIEWFORM extends javax.swing.JFrame {
             read.close();
             buffer.close();
         } catch (Exception e) {
-           // System.out.println("File not Found!");
-            JOptionPane.showMessageDialog(null, "Jailor File Not Found");
+            System.out.println("File not Found!");
+            //JOptionPane.showMessageDialog(null, "Jailor File Not Found");
           
         }
 

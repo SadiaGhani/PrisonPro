@@ -33,10 +33,19 @@ public class Guards {
         for (int i = 0; i < size; i++) {
             if ((GName.charAt(i) >= 'a' && GName.charAt(i) <= 'z') || (GName.charAt(i) >= 'A' && GName.charAt(i) <= 'Z') || GName.charAt(i) == ' ') {
 
-                this.GName = GName;
+                
                 f = true;
             }
+            else
+            {
+                f = false;
+                break;
+            }
 
+        }
+        if(f== true)
+        {
+            this.GName = GName;
         }
 
         return f;
